@@ -1,0 +1,64 @@
+.logo{
+    display:block;
+    margin:0px auto;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.menu{
+    font-family: 'DM Serif Text', serif;
+    background-color: rgba(255, 213, 2, 0.356);
+    border-top: 2px solid rgb(247, 185, 70);
+    text-align:center;
+    line-height:30px;
+}
+
+body {
+    font-family: 'DM Serif Text', serif;
+}
+
+#presentazione {
+    width: 70%;
+    display:block;
+    margin:0px auto;
+    text-align:center;
+}
+
+.cite{
+    color: rgba(94, 94, 94, 0.40)
+
+}
+
+/*
+iframe.video{
+}
+*/
+
+section.featured{
+    margin-left: 20%;
+    border-left: 1px solid orange;
+}
+
+section h4{
+    margin-left: 20%;
+    font-weight: 800;
+
+}
+
+section h5{
+    margin-left: 20%;
+}
+
+section ul{
+    margin-left: 20%;
+    font-style: italic;
+}
+
+section ol{
+    margin-left: 20%;
+    font-style: italic;
+}
+
+.read-more {
+    margin-left: 20%;
+}
