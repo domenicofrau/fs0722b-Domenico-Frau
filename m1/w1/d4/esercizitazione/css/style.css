@@ -1,0 +1,75 @@
+/* -------------------------------------------------------------- */
+/* IMPOSTAZIONI GENERALI */
+/* -------------------------------------------------------------- */
+body{
+    font-family: 'DM Serif Text', serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+
+}
+h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+h3{
+    font-size: 0.8rem;
+}
+h4{
+    font-size: 0.6rem;
+}
+h5{
+    font-size: 0.5rem;
+}
+h6{
+    font-size: 0.4rem;
+}
+
+/* -------------------------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------------------------- */
+#box{
+    display: block;
+    background-color: rgb(0, 101, 136);
+    padding:5%;
+    margin-left:5%;
+    margin-right: 5%;
+    text-align: center;
+    box-shadow: 5px 0px 5px rgb(99, 99, 99);
+    color: white;
+}
+
+/* -------------------------------------------------------------- */
+/* MAIN */
+/* -------------------------------------------------------------- */
+#background{
+    background-image: url(../img/sfondo.png);
+    background-position: center center;
+}
+
+/* -------------------------------------------------------------- */
+/* ELEMENTI NEL MAIN - ARTICLE */
+/* -------------------------------------------------------------- */
+#articolo{
+    background-color: white;
+    box-shadow: 5px 0px 5px rgb(99, 99, 99);
+    padding:5%;
+    margin:5%;
+}
+
+footer{
+    background-color: rgb(0, 101, 136);
+    box-shadow: 5px 0px 5px rgb(99, 99, 99);
+    padding:5%;
+    margin:5%;
+}
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */

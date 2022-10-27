@@ -24,15 +24,18 @@ body {
     text-align:center;
 }
 
+#youtube_codegena{
+    width: 70%;
+    display:block;
+    margin:0,50,0;
+    text-align:center;
+
+}
+
 .cite{
     color: rgba(94, 94, 94, 0.40)
 
 }
-
-/*
-iframe.video{
-}
-*/
 
 section.featured{
     margin-left: 20%;
