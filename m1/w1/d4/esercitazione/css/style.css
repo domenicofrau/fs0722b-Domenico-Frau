@@ -4,11 +4,13 @@
 body{
     font-family: 'DM Serif Text', serif;
     font-family: 'Poppins', sans-serif;
+    background-image: url(../img/sfondo.png);
+    background-position: center center;
 }
 
 h1{
-    font-size: 2rem;
-
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 h2{
     font-size: 1.5rem;
@@ -32,21 +34,39 @@ h6{
 /* -------------------------------------------------------------- */
 #box{
     display: block;
-    background-color: rgb(0, 101, 136);
-    padding:5%;
+    background: linear-gradient(#009ac0,#056988);
     margin-left:5%;
     margin-right: 5%;
+    margin-top: 5%;
     text-align: center;
     box-shadow: 5px 0px 5px rgb(99, 99, 99);
     color: white;
+    border:1px solid #6395ae ;
+}
+
+#logo{
+    height: 4em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+
+
+h1{
+    margin-bottom: 1.1em;
+}
+
+li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white
 }
 
 /* -------------------------------------------------------------- */
 /* MAIN */
 /* -------------------------------------------------------------- */
 #background{
-    background-image: url(../img/sfondo.png);
-    background-position: center center;
+
 }
 
 /* -------------------------------------------------------------- */
