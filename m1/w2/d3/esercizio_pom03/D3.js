@@ -2,6 +2,8 @@
  Scrivi un algoritmo per trovare il più grande tra due numeri interi.
 */
 
+/* SCRIVI QUI LA TUA RISPOSTA */
+
 var primoNumero = 2;
 var secondoNumero = 5;
 
@@ -15,8 +17,6 @@ if (primoNumero == secondoNumero) {
   risposta = "I due numeri sono uguali"
 } 
 console.log(risposta)
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -91,6 +91,26 @@ if (totalShoppingCart > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+var prezzo1 = 10;
+var prezzo2 = 60;
+var prezzo3 = 10;
+
+var spedizione = 10;
+var sconto = 0.8
+
+let totalShoppingCartScontoApplicato = (prezzo1*sconto) + (prezzo2*sconto) + (prezzo3*sconto)
+
+if (totalShoppingCartScontoApplicato > 50) {
+  risposta = "Hai diritto alla spedizione gratuita!"
+  console.log(risposta)
+  console.log(totalShoppingCartScontoApplicato)
+
+} else{
+  risposta= "Il totale del carrello è"
+  console.log(risposta)
+  console.log(totalShoppingCartScontoApplicato+spedizione)
+}
+
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -100,9 +120,16 @@ if (totalShoppingCart > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-var a = 20;
-var b = 30;
-var c = 40;
+var a = 40
+var b = 23
+var c = 11
+
+var numeri = [a,b,c];
+
+numeri.sort(function(a, b) {
+  return (b - a);
+});
+console.log(numeri);
 
 
 /* ESERCIZIO 8
@@ -155,7 +182,7 @@ const me = {
   skills: ['javascript', 'html', 'css'],
 }
 me.city = 'Toronto'
-console.log(me.city)
+console.log(me)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -165,11 +192,27 @@ console.log(me.city)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const me02 = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
+}
+me.lastName = delete
+console.log(me02)
+
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const me03 = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
+}
+me.skills = delete
+console.log(me03)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
@@ -177,9 +220,22 @@ console.log(me.city)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+var array01 = []
+
+for (var i = 0; i < 10; i++){
+  numero = parseInt(1 + i);
+  array01.push(numero);
+}
+console.log(array01);
+
+
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+var array02 = array01
+array02.splice([9],1,100)
+console.log(array02);

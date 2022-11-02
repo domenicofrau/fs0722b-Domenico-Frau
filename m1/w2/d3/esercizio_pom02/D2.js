@@ -14,7 +14,7 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /*
-
+-------------------------------------------------------------------------------------------------------------------------
 I principali datatype sono i seguenti:
 
 stringa : indica una sequenza di caratteri
@@ -22,7 +22,7 @@ stringa : indica una sequenza di caratteri
 numerico : indica una sequenza di numeri (i numeri decimali si esprimono con il punto)
 
 booleano: ammette solo due valori, vero o falso. Si usa per contolli condizionali.
-
+-------------------------------------------------------------------------------------------------------------------------
 */
 
 /* ESERCIZIO 2
