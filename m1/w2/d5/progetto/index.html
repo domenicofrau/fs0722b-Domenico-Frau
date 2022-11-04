@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="calcolatrice">
+        <div>
+            <input type="text" name="display" id="operazioni" readonly="readonly" class="display">
+        </div>
+
+        <div>
+            <input type="submit" value="C" onclick="cancella()" class="tasto pro">
+            <input type="submit" id=" " value=" " class="tasto pro">
+            <input type="submit" id=" " value=" " class="tasto pro">
+            <input type="submit" id="/" value="÷" onclick="t(this.id)" class="tasto operatore">
+        </div>
+
+        <div>
+            <input type="submit" id="7" value="7" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="8" value="8" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="9" value="9" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="*" value="×" onclick="t(this.id)" class="tasto operatore">
+        </div>
+        <div>
+            <input type="submit" id="4" value="4" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="5" value="5" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="6" value="6" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="-" value="-" onclick="t(this.id)" class="tasto operatore">
+        </div>
+        <div>
+            <input type="submit" id="1" value="1" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="2" value="2" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="3" value="3" onclick="t(this.id)" class="tasto">
+            <input type="submit" id="+" value="+" onclick="t(this.id)" class="tasto operatore">
+        </div>
+        <div>
+            <input type="submit" id="0" value="0" onclick="t(this.id)" class="tasto zero">
+            <input type="submit" id="." value="," onclick="t(this.id)" class="tasto">
+            <input type="submit" id="." value="=" onclick="operazione()" class="tasto operatore">
+
+        </div>
+        <script src="js/script.js">
+        </script>
+</body>
+
+</html>
+
+<!--
+            ddddddd                                                            
+            d:::::d                                                             
+            d:::::d                                                             
+            d:::::d                                                             
+            d:::::d                                                              
+    ddddddddd:::::d    ooooooooooo      mmmmmmm    mmmmmmm        eeeeeeeeeeee    
+  dd::::::::::::::d  oo:::::::::::oo  mm:::::::m  m:::::::mm    ee::::::::::::ee  
+ d::::::::::::::::d o:::::::::::::::o m::::::::::mm::::::::::m e::::::eeeee:::::ee
+d:::::::ddddd:::::d o:::::ooooo:::::o m::::::::::::::::::::::m e::::::e     e:::::e
+d::::::d    d:::::d o::::o     o::::o m:::::mmm::::::mmm:::::m e:::::::eeeee::::::e
+d:::::d     d:::::d o::::o     o::::o m::::m   m::::m   m::::m e:::::::::::::::::e 
+d:::::d     d:::::d o::::o     o::::o m::::m   m::::m   m::::m e::::::eeeeeeeeeee  
+d:::::d     d:::::d o::::o     o::::o m::::m   m::::m   m::::m e:::::::e           
+d::::::ddddd::::::d o:::::ooooo:::::o m::::m   m::::m   m::::m e::::::::e          
+ d::::::::::::::::d  o:::::::::::::o  m::::m   m::::m   m::::m e::::::::eeeeeeee  
+  d:::::::::ddd:::d  oo:::::::::::oo  m::::m   m::::m   m::::m  ee:::::::::::::e  
+   ddddddddd   dddd    ooooooooooo    mmmmmm   mmmmmm   mmmmmm    eeeeeeeeeeeeee    
+                         
+-->
