@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgb(41, 84, 159), rgb(237, 196, 196));
+}
+
+.container {
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+
+}
+
+#nuovatask {
+    position: relative;
+    padding: 30px 20px;
+}
+
+#nuovatask input {
+    padding: 10px;
+    width: 70%;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    color: #111111;
+    font-weight: 400;
+    position: relative;
+    border-radius: 5px;
+}
+
+#nuovatask input:focus {
+    outline: none;
+    border-color: #747d87;
+}
+
+#nuovatask button {
+    position: relative;
+    float: right;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+#tasks {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.task {
+    background-color: rgba(252, 251, 249, 0.7);
+    height: 50px;
+    margin-bottom: 3px;
+    padding: 5px 30px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border: #c7c7c7 1px solid;
+}
+
+.task span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.task button {
+    background-color: #ca5a43;
+    color: #ffffff;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
