@@ -19,7 +19,7 @@ console.log("ESERCIZIO B :", random)
 Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
-let me =                                                            //creo l'oggetto richiesto ed aggiungo le varie proprietà;
+let me =                                                            //creo la variabile di tipo oggetto al cui interno definisco le varie proprietà;
 {
   "name": "Domenico",
   "surname": "Frau",
@@ -149,13 +149,13 @@ function whatDayIsIt() {                                            //creo la fu
   let giorno = data.getDay();                                       //definisco una seconda variabile ed ottengo, richiamando la prima, il numero del giorno attuale della settimana.
   let giorni = new Array                                            //definisco un nuovo array che contiene i vari giorni della settimana sotto forma di stringa. Il primo è la domenica, per via del fatto che Javacript gli attribuisce di default l'indice 0; 
     (
-      'Domenica',
-      'Lunedì',
-      'Martedì',
-      'Mercoledì',
-      'Giovedì',
-      'Venerdì',
-      'Sabato'
+      'Domenica',                                                   //[0]
+      'Lunedì',                                                     //[1]
+      'Martedì',                                                    //[2]
+      'Mercoledì',                                                  //[3]
+      'Giovedì',                                                    //[4]
+      'Venerdì',                                                    //[5]
+      'Sabato'                                                      //[6]
     );
 
   return (giorni[giorno]);                                          //restituisco il numero del giorno sotto forma di stringa attraverso il richiamo delle variabili definite;
@@ -367,14 +367,14 @@ Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'a
 */
 
 function newestMovie(movies) {                                      //creo la funzione richiesta;             
-  let film = movies[0];                                             //
-  let anno = movies[0].Year;                                        //
+  let film = movies[0];                                             //definisco una variabile che vada a "leggere" il nome del film in prima posizione (indice 0);
+  let anno = movies[0].Year;                                        //definisco una variabile che vada a "leggere" la proprietà Year del film in prima posizione (indice 0);
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    if (f.Year > anno) {                                            //
-      film = f;                                                     //
+    if (f.Year > anno) {                                            //se l'anno del film preso in esame al momento dell'iterazione è maggiore dell'anno "letto" grazie alla seconda variabile...;
+      film = f;                                                     //...allora gli attribuisco la prima posizione aggiornando la prima variabile;
     }
   }
-  return film;                                                      //
+  return film;                                                      //restituisco la variabile;
 }
 
 console.log("ESERCIZIO 12 :", newestMovie(movies));
@@ -384,8 +384,8 @@ Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti
 */
 
 function countMovies() {                                            //creo la funzione richiesta; 
-  let nFilm = movies.length;                                        //
-  return nFilm                                                      //
+  let nFilm = movies.length;                                        //definisco una variabile che vada a "leggere" la lunghezza dell'array movies grazie al metodo .length
+  return nFilm                                                      //restituisco la variabile;
 }
 
 console.log("ESERCIZIO 13 :", countMovies(), "film totali");
@@ -395,11 +395,11 @@ Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli 
 */
 
 function onlyTheYears() {                                           //creo la funzione richiesta; 
-  let arr = [];                                                     //
-  for (let f of movies) {                                           //
+  let arr = [];                                                     //definisco una variabile di tipo arrey vuoto;
+  for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     arr.push(f.Year);                                               //
   }
-  return arr;                                                       //
+  return arr;                                                       //restituisco l'array ottenuto;
 }
 
 console.log("ESERCIZIO 14 :", onlyTheYears());
@@ -425,11 +425,11 @@ Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli 
 */
 
 function sumAllTheYears() {                                         //creo la funzione richiesta; 
-  let arr = 0;                                                      //
+  let somma = 0;                                                    //
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    arr += parseInt(f.Year);                                        //
+    somma += parseInt(f.Year);                                      //
   }
-  return arr;                                                       //
+  return somma;                                                     //
 }
 
 console.log("ESERCIZIO 16 :", sumAllTheYears());
@@ -439,7 +439,7 @@ Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come paramet
 */
 
 function searchByTitle(str = "") {                                  //creo la funzione richiesta che accetta una stringa come parametro;                                  
-  let arr = [];                                                     //
+  let arr = [];                                                     //definisco una variabile di tipo arrey vuoto;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     if (f.Title.toLowerCase().match(str.toLowerCase())) {           //
       arr.push(f);                                                  //
@@ -456,7 +456,7 @@ Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come param
 */
 
 function searchAndDivide(str = "") {                                //creo la funzione richiesta che accetta una stringa come parametro;
-  let obj = { match: [], unmatch: [] };                             //
+  let obj = { match: [], unmatch: [] };                             //creo la variabile di tipo oggetto al cui interno definisco i due array vuoti richiesti;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     if (f.Title.toLowerCase().match(str.toLowerCase())) {           //
       obj.match.push(f);                                            //
@@ -464,7 +464,7 @@ function searchAndDivide(str = "") {                                //creo la fu
       obj.unmatch.push(f);                                          //  
     }
   }
-  return obj;                                                       //
+  return obj;                                                       //restituisco l'oggetto;
 }
 
 console.log("ESERCIZIO 18 :", searchAndDivide("Avengers"));
@@ -475,7 +475,7 @@ Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e
 
 function removeIndex(n) {                                           //creo la funzione richiesta che accetta un parametro;
   movies.splice(n, 1);                                              //
-  return movies;                                                    //
+  return movies;                                                    //restituisco l'oggetto;
 }
 
 console.log("ESERCIZIO 19 :", removeIndex(5));
@@ -508,11 +508,11 @@ Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto 
 console.log("ESERCIZIO 22 :")                                       //ho preferito spostare il console.log prima della funzione per rendere maggiormente comprensibile e pulita la lettura della console;
 function print() {                                                  //creo la funzione richiesta; 
   let td = document.querySelectorAll('td');                         //definisco una variabile che seleziona tutti i tag <td></td> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
-  for (const i of td) {                                             //
+  for (const i of td) {                                             //determino il funzionamento del ciclo "for";
     console.log(i.innerHTML)                                        //
   }
 }
-print()                                                             //
+print()                                                             //avvio la funzione;
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 23
 Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -520,10 +520,10 @@ Scrivi una funzione per aggiungere un background di colore rosso a ogni link all
 
 function addBackground() {                                          //creo la funzione richiesta; 
   let a = document.querySelectorAll("a");                           //definisco una variabile che seleziona tutti i tag <a></a> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
-  for (let i of a) {                                                //
+  for (let i of a) {                                                //determino il funzionamento del ciclo "for";
     i.style.background = "red";                                     //
   }
-  return "sfondo aggiunto"                                          //
+  return "sfondo aggiunto"                                          //restituisco una stringa di conferma;
 }
 
 console.log("ESERCIZIO 23 :", addBackground())
@@ -537,7 +537,7 @@ function addLi() {                                                  //creo la fu
   li.appendChild(document.createTextNode('test'))                   //
   let aggiunto = document.getElementById('myList').appendChild(li); //
 }
-addLi()                                                             //
+addLi()                                                             //avvio la funzione;
 
 console.log("ESERCIZIO 24 :", document.querySelector('#myList'))
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -547,10 +547,10 @@ Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 
 function svuota() {                                                 //creo la funzione richiesta; 
   let li = document.getElementById("myList");                       //definisco una variabile che riceve l'elemento contenente l'id specificato (in questo caso myList) presente nel documento grazie al metodo getElementById;
-  while (li.firstChild) {                                           //
+  while (li.firstChild) {                                           //determino il funzionamento del ciclo "while";
     li.removeChild(li.firstChild);                                  //
   }
-  return li                                                         //
+  return li                                                         //restituisco la variabile;
 }
 
 console.log("ESERCIZIO 25 :", svuota())
@@ -561,10 +561,10 @@ Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 
 function addClass() {                                               //creo la funzione richiesta; 
   let tr = document.querySelectorAll("tr");                         //definisco una variabile che seleziona tutti i tag <tr></tr> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
-  for (let i of tr) {                                               //
+  for (let i of tr) {                                               //determino il funzionamento del ciclo "for";
     i.classList.add("test");                                        //
   }
-  return tr                                                         //
+  return tr                                                         //restituisco la variabile;
 }
 
 console.log("ESERCIZIO 26 :", addClass())
@@ -597,4 +597,38 @@ tree(3)
 
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
+ /*
+            ddddddd                                                            
+            d:::::d                                                             
+            d:::::d                                                             
+            d:::::d                                                               
+            d:::::d                                                                  
+    ddddddddd:::::d      ooooooooooo        mmmmmmm    mmmmmmm          eeeeeeeeeeee    
+  dd::::::::::::::d    oo:::::::::::oo    mm:::::::m  m:::::::mm      ee::::::::::::ee  
+ d::::::::::::::::d   o:::::::::::::::o   m::::::::::mm::::::::::m   e::::::eeeee:::::ee
+d:::::::ddddd:::::d   o:::::ooooo:::::o   m::::::::::::::::::::::m   e::::::e     e:::::e
+d::::::d    d:::::d   o::::o     o::::o   m:::::mmm::::::mmm:::::m   e:::::::eeeee::::::e
+d:::::d     d:::::d   o::::o     o::::o   m::::m   m::::m   m::::m   e:::::::::::::::::e 
+d:::::d     d:::::d   o::::o     o::::o   m::::m   m::::m   m::::m   e::::::eeeeeeeeeee  
+d:::::d     d:::::d   o::::o     o::::o   m::::m   m::::m   m::::m   e:::::::e           
+d::::::ddddd::::::d   o:::::ooooo:::::o   m::::m   m::::m   m::::m   e::::::::e          
+ d::::::::::::::::d    o:::::::::::::o    m::::m   m::::m   m::::m   e::::::::eeeeeeee  
+  d:::::::::ddd:::d    oo:::::::::::oo    m::::m   m::::m   m::::m    ee:::::::::::::e  
+   ddddddddd   dddd      ooooooooooo      mmmmmm   mmmmmm   mmmmmm      eeeeeeeeeeeeee  
+               
 */
