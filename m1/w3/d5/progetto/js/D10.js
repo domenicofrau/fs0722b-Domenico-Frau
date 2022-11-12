@@ -144,12 +144,21 @@ console.log("ESERCIZIO 6 :", isThisAnEmail('domenico.frau@outlook.com'))
 Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
-function whatDayIsIt() {
-  let data = new Date();
-  let giorno = data.getDay();
-  let giorni = new Array('Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato');
+function whatDayIsIt() {                                            //creo la funzione richiesta;
+  let data = new Date();                                            //definisco la prima variabile ottenendo la data attuale grazie all'utilizzo dell'oggetto integrato nelle API di Javascript "Date";
+  let giorno = data.getDay();                                       //definisco una seconda variabile ed ottengo, richiamando la prima, il numero del giorno attuale della settimana.
+  let giorni = new Array                                            //definisco un nuovo array che contiene i vari giorni della settimana sotto forma di stringa. Il primo è la domenica, per via del fatto che Javacript gli attribuisce di default l'indice 0; 
+  (
+    'Domenica', 
+    'Lunedì', 
+    'Martedì', 
+    'Mercoledì', 
+    'Giovedì', 
+    'Venerdì', 
+    'Sabato'
+  );
 
-  return (giorni[giorno]);
+  return (giorni[giorno]);                                          //restituisco il numero del giorno sotto forma di stringa attraverso il richiamo delle variabili definite;
 }
 
 console.log("ESERCIZIO 7 :", whatDayIsIt())
@@ -167,17 +176,17 @@ values: [3, 3, 4]
 }
 */
 
-function rollTheDices(n) {
-  let obj = {};
-  let arr = [];
+function rollTheDices(n) {                                           //creo la funzione richiesta che accetta un parametro;
+  let obj = {};                                                      //definisco una variabile di tipo oggetto vuoto;
+  let arr = [];                                                      //definisco una variabile di tipo arrey vuoto;
 
-  for (let i = 0; i < n; i++) {
-    arr.push(dice());
+  for (let i = 0; i < n; i++) {                                      //determino il funzionamento del ciclo "for";
+    arr.push(dice());                                                //aggiungo all'array vuoto tramite il metodo .push, la funzione creata in precedenza;
   }
 
-  obj.values = arr;
-  obj.sum = eval(arr.join('+'));
-  return obj
+  obj.values = arr;                                                  //determino che la nuova proprietà "values" dell'oggetto creato contenga l'array;
+  obj.sum = eval(arr.join('+'));                                     //determino che la nuova proprietà "sum" dell'oggetto creato contenga la somma dei valori estratti dall'array sfruttando il metodo eval che valuta o esegue un argomento. Se l'argomento è un'espressione, eval valuta l'espressione. Se l'argomento è una o più istruzioni JavaScript, eval esegue le istruzioni. Il join metodo restituisce un array sotto forma di stringa;
+  return obj                                                         //restituisco l'oggetto;
 }
 
 console.log("ESERCIZIO 8 :", rollTheDices(6))
@@ -186,11 +195,11 @@ console.log("ESERCIZIO 8 :", rollTheDices(6))
 Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
-function howManyDays(date) {
-  let x = new Date();
-  let y = new Date(date);
+function howManyDays(date) {                                         //creo la funzione richiesta che accetta un parametro;
+  let x = new Date();                                                //definisco la prima variabile ottenendo la data attuale grazie all'utilizzo dell'oggetto integrato nelle API di Javascript "Date";
+  let y = new Date(date);                                            //definisco la seconda variabile contenente la data inseita come parametro al momento del lancio della funzione attraverso l'utilizzo dell'oggetto integrato nelle API di Javascript "Date";
 
-  const differenza = Math.floor((x - y) / (1000 * 60 * 60 * 24));
+  const differenza = Math.floor((x - y) / (1000 * 60 * 60 * 24));   
 
   return differenza
 }
