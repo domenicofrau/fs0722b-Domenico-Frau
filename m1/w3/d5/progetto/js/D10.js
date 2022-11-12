@@ -369,7 +369,7 @@ Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'a
 function newestMovie(movies) {                                      //creo la funzione richiesta;             
   let film = movies[0];                                             //
   let anno = movies[0].Year;                                        //
-  for (let f of movies) {                                           //
+  for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     if (f.Year > anno) {                                            //
       film = f;                                                     //
     }
@@ -383,7 +383,7 @@ console.log("ESERCIZIO 12 :", newestMovie(movies));
 Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
 
-function countMovies() {                                            //
+function countMovies() {                                            //creo la funzione richiesta; 
   let nFilm = movies.length;                                        //
   return nFilm                                                      //
 }
@@ -394,7 +394,7 @@ console.log("ESERCIZIO 13 :", countMovies(), "film totali");
 Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 
-function onlyTheYears() {                                           //
+function onlyTheYears() {                                           //creo la funzione richiesta; 
   let arr = [];                                                     //
   for (let f of movies) {                                           //
     arr.push(f.Year);                                               //
@@ -408,14 +408,14 @@ console.log("ESERCIZIO 14 :", onlyTheYears());
 Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-function onlyInLastMillennium() {                                   //
-  arr = [];                                                         //
-  for (let f of movies) {                                           //
+function onlyInLastMillennium() {                                   //creo la funzione richiesta; 
+  let arr = [];                                                     //definisco una variabile di tipo arrey vuoto;
+  for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     if (f.Year < 2000) {                                            //
       arr.push(f);                                                  //
     }
   }
-  return arr;                                                       //
+  return arr;                                                       //restituisco l'array ottenuto;
 }
 
 console.log("ESERCIZIO 15 :", onlyInLastMillennium());
@@ -424,9 +424,9 @@ console.log("ESERCIZIO 15 :", onlyInLastMillennium());
 Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
-function sumAllTheYears() {                                         //
-  arr = 0;                                                          //
-  for (let f of movies) {                                           //
+function sumAllTheYears() {                                         //creo la funzione richiesta; 
+  let arr = 0;                                                      //
+  for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     arr += parseInt(f.Year);                                        //
   }
   return arr;                                                       //
@@ -438,9 +438,9 @@ console.log("ESERCIZIO 16 :", sumAllTheYears());
 Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-function searchByTitle(str = "") {                                  //                                  
+function searchByTitle(str = "") {                                  //creo la funzione richiesta che accetta una stringa come parametro;                                  
   let arr = [];                                                     //
-  for (let f of movies) {                                           //
+  for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     if (f.Title.toLowerCase().match(str.toLowerCase())) {           //
       arr.push(f);                                                  //
     }
@@ -455,9 +455,9 @@ Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come param
 "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
-function searchAndDivide(str = "") {                                //
+function searchAndDivide(str = "") {                                //creo la funzione richiesta che accetta una stringa come parametro;
   let obj = { match: [], unmatch: [] };                             //
-  for (let f of movies) {                                           //
+  for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
     if (f.Title.toLowerCase().match(str.toLowerCase())) {           //
       obj.match.push(f);                                            //
     } else {                                                        //
@@ -473,7 +473,7 @@ console.log("ESERCIZIO 18 :", searchAndDivide("Avengers"));
 Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-function removeIndex(n) {                                           //
+function removeIndex(n) {                                           //creo la funzione richiesta che accetta un parametro;
   movies.splice(n, 1);                                              //
   return movies;                                                    //
 }
@@ -484,9 +484,9 @@ console.log("ESERCIZIO 19 :", removeIndex(5));
 Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-function select() {                                                 //
-  let get = document.getElementById('container');                   //
-  return get                                                        //
+function select() {                                                 //creo la funzione richiesta; 
+  let get = document.getElementById('container');                   //definisco una variabile che riceve l'elemento contenente l'id specificato (in questo caso container) presente nel documento grazie all'utilizzo del metodo getElementById;
+  return get                                                        //restituisco la variabile;
 }
 
 console.log("ESERCIZIO 20 :", select())
@@ -495,8 +495,8 @@ console.log("ESERCIZIO 20 :", select())
 Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-function selectTag() {                                              //
-  return document.querySelectorAll("td");                           //
+function selectTag() {                                              //creo la funzione richiesta; 
+  return document.querySelectorAll("td");                           //restituisco tutti i tag <td></td> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
 }
 
 console.log("ESERCIZIO 21 :", selectTag())
@@ -505,9 +505,9 @@ console.log("ESERCIZIO 21 :", selectTag())
 Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
-console.log("ESERCIZIO 22 :")                                       //
-function print() {                                                  //
-  let td = document.querySelectorAll('td');                         //
+console.log("ESERCIZIO 22 :")                                       //ho preferito spostare il console.log prima della funzione per rendere maggiormente comprensibile e pulita la lettura della console;
+function print() {                                                  //creo la funzione richiesta; 
+  let td = document.querySelectorAll('td');                         //definisco una variabile che seleziona tutti i tag <td></td> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
   for (const i of td) {                                             //
     console.log(i.innerHTML)                                        //
   }
@@ -518,8 +518,8 @@ print()                                                             //
 Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-function addBackground() {                                          //
-  let a = document.querySelectorAll("a");                           //
+function addBackground() {                                          //creo la funzione richiesta; 
+  let a = document.querySelectorAll("a");                           //definisco una variabile che seleziona tutti i tag <a></a> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
   for (let i of a) {                                                //
     i.style.background = "red";                                     //
   }
@@ -532,7 +532,7 @@ console.log("ESERCIZIO 23 :", addBackground())
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-function addLi() {                                                  //
+function addLi() {                                                  //creo la funzione richiesta; 
   let li = document.createElement('li');                            //
   li.appendChild(document.createTextNode('test'))                   //
   let aggiunto = document.getElementById('myList').appendChild(li); //
@@ -545,8 +545,8 @@ console.log("ESERCIZIO 24 :", document.querySelector('#myList'))
 Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
-function svuota() {                                                 //
-  let li = document.getElementById("myList");                       //
+function svuota() {                                                 //creo la funzione richiesta; 
+  let li = document.getElementById("myList");                       //definisco una variabile che riceve l'elemento contenente l'id specificato (in questo caso myList) presente nel documento grazie al metodo getElementById;
   while (li.firstChild) {                                           //
     li.removeChild(li.firstChild);                                  //
   }
@@ -559,8 +559,8 @@ console.log("ESERCIZIO 25 :", svuota())
 Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-function addClass() {                                               //
-  let tr = document.querySelectorAll("tr");                         //
+function addClass() {                                               //creo la funzione richiesta; 
+  let tr = document.querySelectorAll("tr");                         //definisco una variabile che seleziona tutti i tag <tr></tr> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
   for (let i of tr) {                                               //
     i.classList.add("test");                                        //
   }
