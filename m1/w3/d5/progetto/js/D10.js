@@ -3,15 +3,15 @@
 Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
-let sum = 10 + 20;
+let sum = 10 + 20;                                                  //creo la variabile;
 
-console.log("ESERCIZIO A :", sum)
+console.log("ESERCIZIO A :", sum)                                                                 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO B
 Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
-let random = Math.ceil(Math.random() * 20);
+let random = Math.ceil(Math.random() * 20);                         //creo la variabile richiesta ed attraverso l'utilizzo dell'oggetto integrato nelle API di Javascript "Math" creo un numero randomico compreso tra 0 e 20, grazie al metodo ".random". (.ceil è l'approsimazione per eccesso, si sarebbe potuto utilizzare anche .floor, o .round ma avrebbe potuto generare anche lo 0, cosa che non era richiesta nell'esercizio);
 
 console.log("ESERCIZIO B :", random)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ console.log("ESERCIZIO B :", random)
 Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti proprietà: name = il tuo nome, surname = il tuo cognome, age = la tua età.
 */
 
-let me =
+let me =                                                            //creo l'oggetto richiesto ed aggiungo le varie proprietà;
 {
   "name": "Domenico",
   "surname": "Frau",
@@ -32,8 +32,8 @@ console.log("ESERCIZIO C :", me)
 Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
-delete me.age;
-//delete me['age'];
+delete me.age;                                                      //utilizzo la keyword "delete" per eliminare la proprietà "age" dall'oggetto "me";
+//delete me['age'];                                                 //alternativa utilizzando la notazione di tipo array
 
 console.log("ESERCIZIO D :", me)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -41,8 +41,8 @@ console.log("ESERCIZIO D :", me)
 Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
-let skills = ['html', 'css', 'javascript',];
-me.skills = skills;
+let skills = ['html', 'css', 'javascript',];                        //creo l'array richiesto (anche se l'html non è un linguaggio di programmazione, ma di markup);
+me.skills = skills;                                                 //aggiungo tale array all'oggetto "me";
 
 console.log("ESERCIZIO E :", me)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -50,7 +50,7 @@ console.log("ESERCIZIO E :", me)
 Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
-let newSkill = me.skills.push("vba");
+let newSkill = me.skills.push("vba");                               //aggiungo all'array "skills" l'elemento "vba" grazie all'utilizzo del metodo .push che permette di aggiungere elementi in ultima posizione;
 
 console.log("ESERCIZIO F :", me)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ console.log("ESERCIZIO F :", me)
 Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
-let delSkill = me.skills.pop()
+let delSkill = me.skills.pop()                                      //rimuovo dall'array
 
 console.log("ESERCIZIO G :", me)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ function deleteOne(str, bool) {
   }
 }
 
-console.log("ESERCIZIO 4 :", deleteOne('PROVA',false))
+console.log("ESERCIZIO 4 :", deleteOne('PROVA', false))
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 5
 Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
@@ -204,15 +204,15 @@ Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi
 function isTodayMyBirthday() {
   let oggi = new Date()
   let giorno = oggi.getDate()
-  let mese = oggi.getMonth()+1
+  let mese = oggi.getMonth() + 1
 
-  if (giorno == 11 && mese == 10){
+  if (giorno == 11 && mese == 10) {
     return true
   }
   return false
 }
 
-console.log("ESERCIZIO 10 :", isTodayMyBirthday(),"il mio compleanno è l'11 ottobre")
+console.log("ESERCIZIO 10 :", isTodayMyBirthday(), "il mio compleanno è l'11 ottobre")
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Arrays & Oggetti
@@ -232,7 +232,7 @@ function deleteProp(ogg = {}, str) {
   return ogg;
 }
 
-console.log("ESERCIZIO 11 :", deleteProp(pizze,"prezzo"));
+console.log("ESERCIZIO 11 :", deleteProp(pizze, "prezzo"));
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
@@ -379,7 +379,7 @@ function countMovies() {
   return nFilm
 }
 
-console.log("ESERCIZIO 13 :", countMovies(),"film totali");
+console.log("ESERCIZIO 13 :", countMovies(), "film totali");
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 14
 Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
@@ -394,6 +394,7 @@ function onlyTheYears() {
 }
 
 console.log("ESERCIZIO 14 :", onlyTheYears());
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 15
 Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
@@ -409,6 +410,7 @@ function onlyInLastMillennium() {
 }
 
 console.log("ESERCIZIO 15 :", onlyInLastMillennium());
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 16
 Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
@@ -422,21 +424,55 @@ function sumAllTheYears() {
 }
 
 console.log("ESERCIZIO 16 :", sumAllTheYears());
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 17
 Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+function searchByTitle(str = "") {
+  let arr = [];
+  for (let f of movies) {
+    if (f.Title.toLowerCase().match(str.toLowerCase())) {
+      arr.push(f);
+    }
+  }
+  return arr;
+}
+
+console.log("ESERCIZIO 17 :", searchByTitle());
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 18
 Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
 "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(str = "") {
+  let obj = {
+    match: [],
+    unmatch: [],
+  };
+  for (let f of movies) {
+    if (f.Title.toLowerCase().match(str.toLowerCase())) {
+      obj.match.push(f);
+    } else {
+      obj.unmatch.push(f);
+    }
+  }
+  return obj;
+}
+
+console.log("ESERCIZIO 18 :", searchAndDivide("Avengers"));
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 19
 Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-//------------------------------------------------------------------------------------------------------------------------------------------------------------
-// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
+function removeIndex(n) {
+  movies.splice(n, 1);
+  return movies;
+}
+
+console.log("ESERCIZIO 19 :", removeIndex(5));
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 20
 Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
@@ -457,7 +493,7 @@ function selectTag() {
   return document.querySelectorAll("td");
 }
 
-console.log("ESERCIZIO 21 :",selectTag())
+console.log("ESERCIZIO 21 :", selectTag())
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 22
 Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -484,7 +520,7 @@ function addBackground() {
   return "sfondo aggiunto"
 }
 
-console.log("ESERCIZIO 23 :",addBackground())
+console.log("ESERCIZIO 23 :", addBackground())
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 24
 Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
@@ -503,10 +539,30 @@ console.log("ESERCIZIO 24 :", document.querySelector('#myList'))
 Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function svuota() {
+  let li = document.getElementById("myList");
+  while (li.firstChild) {
+    li.removeChild(li.firstChild);
+  }
+  return li
+}
+
+console.log("ESERCIZIO 25 :", svuota())
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 /* ESERCIZIO 26
 Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+function addClass() {
+  let tr = document.querySelectorAll("tr");
+  for (let i of tr) {
+    i.classList.add("test");
+  }
+  return tr
+}
+
+console.log("ESERCIZIO 26 :", addClass())
+//------------------------------------------------------------------------------------------------------------------------------------------------------------
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
