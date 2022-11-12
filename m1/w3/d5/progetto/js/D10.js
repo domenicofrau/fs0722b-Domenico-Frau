@@ -397,7 +397,7 @@ Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli 
 function onlyTheYears() {                                           //creo la funzione richiesta; 
   let arr = [];                                                     //definisco una variabile di tipo arrey vuoto;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    arr.push(f.Year);                                               //
+    arr.push(f.Year);                                               //aggiungo all'array l'anno preso in esame dal ciclo grazie al metodo .push;
   }
   return arr;                                                       //restituisco l'array ottenuto;
 }
@@ -411,8 +411,8 @@ Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film
 function onlyInLastMillennium() {                                   //creo la funzione richiesta; 
   let arr = [];                                                     //definisco una variabile di tipo arrey vuoto;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    if (f.Year < 2000) {                                            //
-      arr.push(f);                                                  //
+    if (f.Year < 2000) {                                            //se l'anno preso in esame dal ciclo è precedente all'anno 2000...
+      arr.push(f);                                                  //...allora aggiungo il film nell'array creato;
     }
   }
   return arr;                                                       //restituisco l'array ottenuto;
@@ -425,11 +425,11 @@ Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli 
 */
 
 function sumAllTheYears() {                                         //creo la funzione richiesta; 
-  let somma = 0;                                                    //
+  let somma = 0;                                                    //definisco una variabile uguale a zero;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    somma += parseInt(f.Year);                                      //
+    somma += parseInt(f.Year);                                      //eseguo la somma tra il valore dell'anno preso in esame dal ciclo (trasformato grazie a parseInt) e il valore della variabile somma. Tale variabile incrementerà il suo valore fino al termine del ciclo for, ottenendo così la somma totale;
   }
-  return somma;                                                     //
+  return somma;                                                     //restituisco la variabile;
 }
 
 console.log("ESERCIZIO 16 :", sumAllTheYears());
@@ -441,11 +441,11 @@ Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come paramet
 function searchByTitle(str = "") {                                  //creo la funzione richiesta che accetta una stringa come parametro;                                  
   let arr = [];                                                     //definisco una variabile di tipo arrey vuoto;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    if (f.Title.toLowerCase().match(str.toLowerCase())) {           //
-      arr.push(f);                                                  //
+    if (f.Title.toLowerCase().match(str.toLowerCase())) {           //se il titolo (convertito in minuscolo) del film preso in esame dal ciclo corrisponde alla stringa (convertito in minuscolo) inserita come parametro allora...
+      arr.push(f);                                                  //...allora aggiungo il film nell'array creato;
     }
   }
-  return arr;                                                       //
+  return arr;                                                       //restituisco l'array;
 }
 
 console.log("ESERCIZIO 17 :", searchByTitle());
@@ -458,10 +458,10 @@ Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come param
 function searchAndDivide(str = "") {                                //creo la funzione richiesta che accetta una stringa come parametro;
   let obj = { match: [], unmatch: [] };                             //creo la variabile di tipo oggetto al cui interno definisco i due array vuoti richiesti;
   for (let f of movies) {                                           //determino il funzionamento del ciclo "for";
-    if (f.Title.toLowerCase().match(str.toLowerCase())) {           //
-      obj.match.push(f);                                            //
-    } else {                                                        //
-      obj.unmatch.push(f);                                          //  
+    if (f.Title.toLowerCase().match(str.toLowerCase())) {           //se il titolo (convertito in minuscolo) del film preso in esame dal ciclo corrisponde alla stringa (convertito in minuscolo) inserita come parametro allora...
+      obj.match.push(f);                                            //..aggingo il film all'array match
+    } else {                                                        //altrimenti...
+      obj.unmatch.push(f);                                          //...aggingo il film preso in esame dal ciclo all'array unmatch;
     }
   }
   return obj;                                                       //restituisco l'oggetto;
@@ -474,7 +474,7 @@ Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e
 */
 
 function removeIndex(n) {                                           //creo la funzione richiesta che accetta un parametro;
-  movies.splice(n, 1);                                              //
+  movies.splice(n, 1);                                              //rimuovo l'elemento all'interno dell'array movie grazie al metodo .splice che aggiunge e/o rimuove gli elementi dell'array. E' obbligatorio inserire l'indice da cui partire per eliminare e/o (in questo caso n), mentre invece è facoltativo il secondo parametro che indica il numero di elementi che si vogliono rimuovere.
   return movies;                                                    //restituisco l'oggetto;
 }
 
@@ -509,7 +509,7 @@ console.log("ESERCIZIO 22 :")                                       //ho preferi
 function print() {                                                  //creo la funzione richiesta; 
   let td = document.querySelectorAll('td');                         //definisco una variabile che seleziona tutti i tag <td></td> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
   for (const i of td) {                                             //determino il funzionamento del ciclo "for";
-    console.log(i.innerHTML)                                        //
+    console.dir(i.innerHTML)                                        //mostro in console il contenuto di ogni td esaminato dal ciclo;
   }
 }
 print()                                                             //avvio la funzione;
@@ -521,7 +521,7 @@ Scrivi una funzione per aggiungere un background di colore rosso a ogni link all
 function addBackground() {                                          //creo la funzione richiesta; 
   let a = document.querySelectorAll("a");                           //definisco una variabile che seleziona tutti i tag <a></a> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
   for (let i of a) {                                                //determino il funzionamento del ciclo "for";
-    i.style.background = "red";                                     //
+    i.style.background = "red";                                     //imposto la proprietà di stile background applicando lo sfondo rosso;
   }
   return "sfondo aggiunto"                                          //restituisco una stringa di conferma;
 }
@@ -548,7 +548,7 @@ Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 function svuota() {                                                 //creo la funzione richiesta; 
   let li = document.getElementById("myList");                       //definisco una variabile che riceve l'elemento contenente l'id specificato (in questo caso myList) presente nel documento grazie al metodo getElementById;
   while (li.firstChild) {                                           //determino il funzionamento del ciclo "while";
-    li.removeChild(li.firstChild);                                  //
+    li.removeChild(li.firstChild);                                  //rimuovo il figlio dell'elemento preso in esame dal ciclo;
   }
   return li                                                         //restituisco la variabile;
 }
@@ -562,7 +562,7 @@ Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 function addClass() {                                               //creo la funzione richiesta; 
   let tr = document.querySelectorAll("tr");                         //definisco una variabile che seleziona tutti i tag <tr></tr> del documento grazie all'utilizzo del metodo querySelectorAll che restituisce tutti gli elementi che corrispondono a uno o più selettori CSS;
   for (let i of tr) {                                               //determino il funzionamento del ciclo "for";
-    i.classList.add("test");                                        //
+    i.classList.add("test");                                        //aggiungo la classe test ad ogni tr preso in esame dal ciclo grazie all'utilizzo combinato della proprietà classList che restituisce i nomi delle classi CSS di un elemento e del metodo add che aggiunge uno (o più) token a un DOMTokenList;
   }
   return tr                                                         //restituisco la variabile;
 }
