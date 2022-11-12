@@ -11,7 +11,7 @@ console.log("ESERCIZIO A :", sum)
 Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
 
-let random = Math.ceil(Math.random() * 20);                         //creo la variabile richiesta ed attraverso l'utilizzo dell'oggetto integrato nelle API di Javascript "Math" creo un numero randomico compreso tra 0 e 20, grazie al metodo ".random". (.ceil è l'approsimazione per eccesso, si sarebbe potuto utilizzare anche .floor, o .round ma avrebbe potuto generare anche lo 0, cosa che non era richiesta nell'esercizio);
+let random = Math.floor(Math.random() * 20);                         //creo la variabile richiesta ed attraverso l'utilizzo dell'oggetto integrato nelle API di Javascript "Math" creo un numero randomico compreso tra 0 e 20, grazie al metodo ".random". (.floor è l'approsimazione per difetto, si sarebbe potuto utilizzare anche .ceil, o .round ma non avrebbero generato anche lo 0, cosa che invece era richiesta nell'esercizio);
 
 console.log("ESERCIZIO B :", random)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ console.log("ESERCIZIO F :", me)
 Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
-let delSkill = me.skills.pop()                                      //rimuovo dall'array
+let delSkill = me.skills.pop()                                      //rimuovo dall'array l'ultimo elemento presente all'interno dell'array "me" grazie all'utilizzo del metodo .pop;
 
 console.log("ESERCIZIO G :", me)
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -66,9 +66,9 @@ console.log("ESERCIZIO G :", me)
 Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-function dice() {
-  let random = Math.ceil(Math.random() * 6);
-  return random
+function dice() {                                                   //creo la funzione;
+  let random = Math.ceil(Math.random() * 6);                        //attraverso l'utilizzo dell'oggetto integrato nelle API di Javascript "Math" creo un numero randomico compreso tra 0 e 6, grazie al metodo ".random". (.ceil è l'approsimazione per eccesso, si sarebbe potuto utilizzare anche .floor, o .round ma avrebbero generato anche lo 0, cosa che non era richiesta nell'esercizio);
+  return random                                                     //restituisco il valore;
 }
 
 console.log("ESERCIZIO 1 :", dice())
@@ -77,8 +77,8 @@ console.log("ESERCIZIO 1 :", dice())
 Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 
-function whoIsBigger(a, b) {
-  return Math.max(a, b)
+function whoIsBigger(a, b) {                                        //creo la funzione che accetta i due parametri richiesti;
+  return Math.max(a, b)                                             //ottengo il maggiore fra i due parametri grazie al metodo .max; 
 }
 
 console.log("ESERCIZIO 2 :", whoIsBigger(33, 33))
@@ -89,9 +89,9 @@ Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e rit
 Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
-function splitMe(str) {
-  let arr = [str.split(" ")]
-  return arr
+function splitMe(str) {                                             //creo la funzione che accetta un parametro;
+  let arr = [str.split(" ")]                                        //definisco un array con all'interno la stringa ricevuta come parametro e grazie al metodo .split separo le varie parole che la compongono;
+  return arr                                                        //restituisco l'array;
 }
 console.log("ESERCIZIO 3 :", splitMe('prova di separazione di qualsiasi stringa'))
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -100,14 +100,14 @@ Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come
 Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
-function deleteOne(str, bool) {
-  let senzaLaPrima = str.substr(1);
-  let senzaUltima = str.substr(0, str.length - 1)
-  if (bool == true) {
-    return senzaLaPrima
+function deleteOne(str, bool) {                                     //creo la funzione che accetta due parametri;
+  let senzaLaPrima = str.substr(1);                                 //definisco la prima variabile assegnandole il contenuto della stringa che verrà inserito al momento dell'avvio della funzione. Attraverso l'utilizzo del metodo delle stringhe .substr ottengo la stringa privata della prima lettera;
+  let senzaUltima = str.substr(0, str.length - 1)                   //definisco la seconda variabile assegnandole il contenuto della stringa che verrà inserito al momento dell'avvio della funzione. Attraverso l'utilizzo del metodo delle stringhe .substr ottengo la stringa privata dell'ultima lettera;
+  if (bool == true) {                                               //se il secondo parametro inserito nella funzione al momento del lancio è true, allora...
+    return senzaLaPrima                                             //...restituisco la condizione richiamando la prima variabile creata;
   }
-  else {
-    return senzaUltima
+  else {                                                            //altrimenti...
+    return senzaUltima                                              ////...restituisco la condizione richiamando la seconda variabile creata;
   }
 }
 
@@ -119,8 +119,8 @@ Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e
 Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
-function onlyLetters(str) {
-  return str.replace(/[0-9] ?/g, "")
+function onlyLetters(str) {                                         //creo la funzione che accetta un parametro;   
+  return str.replace(/[0-9] ?/g, "")                                //restituisco la stringa inserita come parametro all'interno della funzione al momento del lancio e grazie al metodo delle stringhe .replace ottengo la stessa stringa ma privata dei numeri come richiesto;
 }
 
 console.log("ESERCIZIO 5 :", onlyLetters('HO 3 GATTI'))
@@ -129,12 +129,12 @@ console.log("ESERCIZIO 5 :", onlyLetters('HO 3 GATTI'))
 Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
-function isThisAnEmail(str) {
-  if (str.includes("@" && ".com")) {
-    return true
+function isThisAnEmail(str) {                                       //creo la funzione che accetta un parametro;  
+  if (str.includes("@" && ".com")) {                                //se la stringa inserita come parametro all'interno della funzione al momento del lancio contiene (utilizzando il metodo delle stringhe .includes) "@" e ".com" allora...
+    return true                                                     //...restituisco true;
   }
-  else {
-    return false
+  else {                                                            //altrimenti...
+    return false                                                    //...restituisco false;
   }
 }
 
