@@ -21,9 +21,9 @@ Crea una variabile chiamata "me" e assegnaci un oggetto contenente le seguenti p
 
 let me =                                                            //creo la variabile di tipo oggetto al cui interno definisco le varie proprietà;
 {
-  "name": "Domenico",
-  "surname": "Frau",
-  "age": "32"
+  "name": "Domenico",                                               //definisco la proprietà name;
+  "surname": "Frau",                                                //definisco la proprietà surname;
+  "age": "32"                                                       //definisco la proprietà age;
 };
 
 console.log("ESERCIZIO C :", me)
@@ -149,13 +149,13 @@ function whatDayIsIt() {                                            //creo la fu
   let giorno = data.getDay();                                       //definisco una seconda variabile ed ottengo, richiamando la prima, il numero del giorno attuale della settimana.
   let giorni = new Array                                            //definisco un nuovo array che contiene i vari giorni della settimana sotto forma di stringa. Il primo è la domenica, per via del fatto che Javacript gli attribuisce di default l'indice 0; 
     (
-      'Domenica',                                                   //[0]
-      'Lunedì',                                                     //[1]
-      'Martedì',                                                    //[2]
-      'Mercoledì',                                                  //[3]
-      'Giovedì',                                                    //[4]
-      'Venerdì',                                                    //[5]
-      'Sabato'                                                      //[6]
+      'Domenica',                                                   //indice[0]
+      'Lunedì',                                                     //indice[1]
+      'Martedì',                                                    //indice[2]
+      'Mercoledì',                                                  //indice[3]
+      'Giovedì',                                                    //indice[4]
+      'Venerdì',                                                    //indice[5]
+      'Sabato'                                                      //indice[6]
     );
 
   return (giorni[giorno]);                                          //restituisco il numero del giorno sotto forma di stringa attraverso il richiamo delle variabili definite;
@@ -211,14 +211,14 @@ Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi
 */
 
 function isTodayMyBirthday() {                                      //creo la funzione richiesta;
-  let oggi = new Date()                                             //
-  let giorno = oggi.getDate()                                       //
-  let mese = oggi.getMonth() + 1                                    //
+  let oggi = new Date()                                             //definisco la prima variabile ottenendo la data attuale grazie all'utilizzo dell'oggetto integrato nelle API di Javascript "Date";
+  let giorno = oggi.getDate()                                       //definisco una seconda variabile ed ottengo, richiamando la prima, il numero del giorno attuale nel mese.
+  let mese = oggi.getMonth() + 1                                    //definisco una terza variabile ed ottengo, richiamando la prima, il mese attuale. Aggiungo 1 perchè questo metodo considera i mesi da 0 a 11;
 
-  if (giorno == 11 && mese == 10) {                                 //
-    return true                                                     //
+  if (giorno == 11 && mese == 10) {                                 //se il giorno derivante dalla seconda variabile è uguale a 11 (giorno del mio compleanno) e il mese derivante dalla terza variabile è uguale a 10 (mese del mio compleanno)...
+    return true                                                     //...allora restituisco vero;
   }
-  return false                                                      //
+  return false                                                      //restituisco falso le l'if statement non soddisfa le condizioni;
 }
 
 console.log("ESERCIZIO 10 :", isTodayMyBirthday(), "il mio compleanno è l'11 ottobre")
@@ -533,9 +533,9 @@ Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con
 */
 
 function addLi() {                                                  //creo la funzione richiesta; 
-  let li = document.createElement('li');                            //
-  li.appendChild(document.createTextNode('test'))                   //
-  let aggiunto = document.getElementById('myList').appendChild(li); //
+  let li = document.createElement('li');                            //definisco una variabile attribuendole la creazione di un elemento con tag <li></li> attraverso l'utilizzo del metodo createElement;
+  li.appendChild(document.createTextNode('test'))                   //aggiungo all'elemento con tag <li></li> creato un "figlio" attraverso l'utilizzo dei metodi appendChild e createTextNode;
+  let aggiunto = document.getElementById('myList').appendChild(li); //definisco una variabile che aggiunge all'elemento con classe myList l'elemento con tag <li></li> appena creato;
 }
 addLi()                                                             //avvio la funzione;
 
@@ -598,37 +598,24 @@ tree(3)
 /* ESERCIZIO 29
 Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 //------------------------------------------------------------------------------------------------------------------------------------------------------------
  /*
-            ddddddd                                                            
-            d:::::d                                                             
-            d:::::d                                                             
-            d:::::d                                                               
-            d:::::d                                                                  
-    ddddddddd:::::d      ooooooooooo        mmmmmmm    mmmmmmm          eeeeeeeeeeee    
-  dd::::::::::::::d    oo:::::::::::oo    mm:::::::m  m:::::::mm      ee::::::::::::ee  
- d::::::::::::::::d   o:::::::::::::::o   m::::::::::mm::::::::::m   e::::::eeeee:::::ee
-d:::::::ddddd:::::d   o:::::ooooo:::::o   m::::::::::::::::::::::m   e::::::e     e:::::e
-d::::::d    d:::::d   o::::o     o::::o   m:::::mmm::::::mmm:::::m   e:::::::eeeee::::::e
-d:::::d     d:::::d   o::::o     o::::o   m::::m   m::::m   m::::m   e:::::::::::::::::e 
-d:::::d     d:::::d   o::::o     o::::o   m::::m   m::::m   m::::m   e::::::eeeeeeeeeee  
-d:::::d     d:::::d   o::::o     o::::o   m::::m   m::::m   m::::m   e:::::::e           
-d::::::ddddd::::::d   o:::::ooooo:::::o   m::::m   m::::m   m::::m   e::::::::e          
- d::::::::::::::::d    o:::::::::::::o    m::::m   m::::m   m::::m   e::::::::eeeeeeee  
-  d:::::::::ddd:::d    oo:::::::::::oo    m::::m   m::::m   m::::m    ee:::::::::::::e  
-   ddddddddd   dddd      ooooooooooo      mmmmmm   mmmmmm   mmmmmm      eeeeeeeeeeeeee  
+               ddddddd                                                            
+               d:::::d                                                             
+               d:::::d                                                             
+               d:::::d                                                               
+               d:::::d                                                                     
+       ddddddddd:::::d         ooooooooooo           mmmmmmm    mmmmmmm             eeeeeeeeeeee    
+     dd::::::::::::::d       oo:::::::::::oo       mm:::::::m  m:::::::mm         ee::::::::::::ee  
+    d::::::::::::::::d      o:::::::::::::::o      m::::::::::mm::::::::::m      e::::::eeeee:::::ee
+   d:::::::ddddd:::::d      o:::::ooooo:::::o      m::::::::::::::::::::::m      e::::::e     e:::::e
+   d::::::d    d:::::d      o::::o     o::::o      m:::::mmm::::::mmm:::::m      e:::::::eeeee::::::e
+   d:::::d     d:::::d      o::::o     o::::o      m::::m   m::::m   m::::m      e:::::::::::::::::e 
+   d:::::d     d:::::d      o::::o     o::::o      m::::m   m::::m   m::::m      e::::::eeeeeeeeeee  
+   d:::::d     d:::::d      o::::o     o::::o      m::::m   m::::m   m::::m      e:::::::e           
+   d::::::ddddd::::::d      o:::::ooooo:::::o      m::::m   m::::m   m::::m      e:::::::e          
+    d::::::::::::::::d       o:::::::::::::o       m::::m   m::::m   m::::m      e::::::::eeeeeeeeee  
+     d:::::::::ddd:::d       oo:::::::::::oo       m::::m   m::::m   m::::m       ee:::::::::::::::e  
+      ddddddddd   dddd         ooooooooooo         mmmmmm   mmmmmm   mmmmmm         eeeeeeeeeeeeeeee  
                
 */
