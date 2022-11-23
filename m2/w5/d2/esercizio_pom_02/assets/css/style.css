@@ -439,15 +439,14 @@ footer a {
 }
 
 /* RICHIESTA 02 DELL'ESERCIZIO*/
-article.clearfix>h1{
+article span{
+  position:relative;
   z-index: 1;
 }
-article.clearfix>h1 img.underline{
-  position:relative;
+article img{
+  position:absolute;
   z-index: 0;
-  top:-30px;
-  left:380px;
-  width: 450px;
+
 }
 
 /* RICHIESTA 03 DELL'ESERCIZIO*/ /*no mod all'html*/
@@ -470,7 +469,6 @@ div #goUp{
   bottom: 10%;
   right:0px;
 }
-
 
 /* RICHIESTA 06 DELL'ESERCIZIO*/ /* mod all'html nelle righe 165-...-171*/
 div #social{
