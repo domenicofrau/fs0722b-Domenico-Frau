@@ -20,13 +20,16 @@
 }
 
 .navBar li {
+    display:flex;
+    font-weight: 600;
     align-items: center;
     background-color: #f3df85;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 30px;
     justify-content: space-between;
 }
 .shop {
+    font-size: 1.5em;
     display:flex;
     align-items: center;
     text-transform: uppercase;

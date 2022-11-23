@@ -1,30 +1,61 @@
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
 .card {
-    flex: 0 0 200px;
-    background: #fbf7e3;
-    margin: 10px;
-    border-radius: 20%;
-}
-.card img {
-    border-radius: 20% 20% 0px 0px;
-    width: 100%;
-}
-.card .testo {
-    display:flex;
-    color:#612406;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    padding: 5% 10%;
+    width: 350px;
+    margin: 100px auto;
+    color: #612407;
 }
 
-.card .text > button {
-    background: gray;
-    border: 0;
-    color:white;
-    padding: 10px;
+.img {
     width: 100%;
+    background-image: url("../img/honey.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100px 100px 0 0;
+    margin-bottom: -10px;
+
+}
+
+.testo {
+    background-color: #FAF7E3;
+    margin: 0;
+    text-align: center;
+    padding: 30px 0 20px 0;
+    border-radius: 0 0 100px 100px;
+
+}
+
+.testo .nome {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.testo .descrizione {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 5px;
+}
+
+.prezzo {
+    float: right;
+    position: relative;
+    top: 15px;
+    right: 40px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.card button {
+    margin-top: 15px;
+    background-color: #F3DF85;
+    padding: 7px 25px;
+    border: 0px solid transparent;
+    border-radius: 15px;
+}
+
+.card button a {
+    color: #612407;
+    text-decoration: none;
 }
