@@ -1,0 +1,188 @@
+#container {
+    display:flex;
+    font-family: Indie Flower;
+    font-size: 14px;
+    width: 1040px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#postIt {
+    margin: 0px;
+    padding: 0px;
+}
+
+#postIt li {
+    margin: 20px;
+    height: 150px;
+    width: 200px;
+    font-size: 12px;
+    float: left;
+    padding: 10px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    list-style-type: none;
+    box-shadow: 1px 2px 10px #000;
+    cursor: pointer;
+}
+
+#postIt-1{
+    background-color: #e2f1ff;
+    transform: rotate(-5deg);
+}
+
+#postIt-1:hover{
+    z-index: 99;
+    transform: translate(40px,20px) scale(1.5) rotate(0deg);
+}
+
+#postIt-2{
+    background-color: #c9fbca;
+    transform: rotate(5deg);
+    top:5px;
+}
+
+#postIt-2:hover{
+    z-index: 99;
+    transform: translate(0px,20px) scale(1.5) rotate(0deg);
+}
+
+#postIt-3{
+    background-color: #c8c8f6;
+    transform: rotate(-2deg);
+}
+
+#postIt-3:hover{
+    z-index: 99;
+    transform: translate(0px,20px) scale(1.5) rotate(0deg);
+}
+
+#postIt-4{
+    background-color: #c9fbca;
+    transform: rotate(10deg);
+    bottom:20px;
+}
+
+#postIt-4:hover{
+    z-index: 99;
+    transform: translate(-40px,50px) scale(1.5) rotate(0deg);
+}
+
+#postIt-5{
+    background-color: #f9fac8;
+    transform: rotate(-2deg);
+}
+
+#postIt-5:hover{
+    z-index: 99;
+    transform: translate(40px,-40px) scale(1.5) rotate(0deg);
+}
+
+#postIt-6{
+    background-color: #c8c8f6;
+    transform: rotate(-8deg);
+}
+
+#postIt-6:hover{
+    z-index: 99;
+    transform: translate(0px,-40px) scale(1.5) rotate(0deg);
+}
+
+#postIt-7{
+    background-color: #f9fac8;
+    transform: rotate(5deg);
+}
+
+#postIt-7:hover{
+    z-index: 99;
+    transform: translate(0px,-40px) scale(1.5) rotate(0deg);
+}
+
+#postIt-8{
+    background-color: #e2f1ff;
+    transform: rotate(-5deg);
+}
+
+#postIt-8:hover{
+    z-index: 99;
+    transform: translate(-40px,-40px) scale(1.5) rotate(0deg);
+}
+
+.titolo{
+    padding: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.contenuto{
+    padding-left: 40px;
+    font-size: 20px;
+}
+
+#postIt #postIt-1{
+    animation-name: animazione_01;
+    animation-duration: 0.3s;
+    animation-delay: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-2{
+    animation-name: animazione_01;
+    animation-duration: 0.4s;
+    animation-delay: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-3{
+    animation-name: animazione_01;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-4{
+    animation-name: animazione_01;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-5{
+    animation-name: animazione_01;
+    animation-duration: 0.4s;
+    animation-delay: 0.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-6{
+    animation-name: animazione_01;
+    animation-duration: 0.6s;
+    animation-delay: 0.7s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-7{
+    animation-name: animazione_01;
+    animation-duration: 0.3s;
+    animation-delay: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+#postIt #postIt-8{
+    animation-name: animazione_01;
+    animation-duration: 0.7s;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+}
+@keyframes animazione_01{
+    0%{opacity:0; transform: scale(10);}
+    100% {opacity:1;transform: scale(0);}
+}
