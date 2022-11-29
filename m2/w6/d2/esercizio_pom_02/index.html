@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1) Implementa una navbar con questi elementi di menu:
+    Home
+    Saldi
+    Welcome Summer
+    Last Minute
+    Recensioni
+
+    Collegherai ogni sezione della pagina agli elementi del menu corrispondenti. 
+
+    2) Aggiungi un logo alla navbar, un qualsiasi logo di agenzia di viaggi, anche inventata. 
+    -->
+
+    <header id="header">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" alt="Bootstrap" width="60"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#saldi">Saldi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#welcomeSummer">Welcome Summer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lastMinute">Last Minute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recensioni">Recensioni</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Cerca</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+    3) Aggiungi una sezione introduttiva con il nome, il payoff dell'agenzia, 
+    una breve descrizione in corsivo e una call-to-action (bottone) "Prenota ora" di colore azzurro chiaro e testo bianco e grassetto.
+
+    Il background della sezione sarà grigio chiaro e con bordi arrotondati e del padding generoso all'interno.
+    -->
+
+    <section id="hero" class="container">
+        <div class="card mb-12 p-5 mt-3 bg-light shadow-sm p-3 mb-5 bg-body rounded">
+            <div class="row g-0">
+                <h1 class="display-1">Travel Company</h1>
+                <div class="col-md-11">
+                    <div class="card-body">
+                        <p class="card-text border-top mt-2"><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Magnam natus
+                            adipisci optio modi similique doloremque soluta numquam fugiat, ipsum beatae! Perspiciatis
+                            voluptatem possimus voluptates officia vel accusantium autem dolorum sint!</em></p>
+                        <button type="button" class="btn btn-info text-light mt-4">Prenota ora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    4) Implementa la sezione "Saldi". Qui mostrerai 4 destinazioni.
+
+    In questa sezione dovranno esserci:
+
+    4 card per destinazioni per linea a schermo grande - desktop (quattro sulla stessa linea)
+    3 card per destinazioni per linea a schermo medio  - tablet  (una dovrà scomparire)
+    2 card per destinazioni per linea a schermo piccolo - mobile (due per linea)
+
+    le card avranno un bordo di 2px azzurro chiaro, il bottone azzurro chiaro e testo default 
+    -->
+
+    <section id="saldi" class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <h2 class="mt-5">Saldi</h2>
+                    <article class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="min-height: 18rem;">
+                        <div class="card border border-2 border-info">
+                            <img src="assets/img/destinazioni/01_costa_azzurra_nizza.webp" class="card-img-top"
+                                alt="Costa Azzurra - Nizza">
+                            <div class="card-body">
+                                <h5 class="card-title">Nizza</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="min-height: 18rem;">
+                        <div class="card border border-2 border-info">
+                            <img src="assets/img/destinazioni/02_malta_mellieha.webp" class="card-img-top"
+                                alt="Malta - Mellieha">
+                            <div class="card-body">
+                                <h5 class="card-title">Mellieha</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" style="min-height: 18rem;">
+                        <div class="card border border-2 border-info">
+                            <img src="assets/img/destinazioni/03_spagna_madrid.webp" class="card-img-top"
+                                alt="Spagna - Madrid">
+                            <div class="card-body">
+                                <h5 class="card-title">Madrid</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 d-md-none d-lg-block col-lg-3 col-xl-3" style="min-height: 18rem;">
+                        <div class="card border border-2 border-info">
+                            <img src="assets/img/destinazioni/04_messico_puerto_morelos.webp" class="card-img-top"
+                                alt="Messico - Puerto Morelos">
+                            <div class="card-body">
+                                <h5 class="card-title">Puerto Morelos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    5) Implementa la sezione "Welcome Summer". 
+    Qui mostrerai 6 destinazioni al tuo utente. (nessun bordo, ma stesso stile dei bottoni precedenti)
+
+    In questa sezione dovranno esserci:
+
+    6 card per destinazioni per linea a schermo extra large
+    3 card per destinazioni per linea a schermo grande (desktop)
+    2 card per destinazioni per linea a schermo medio (tablet)
+    2 card per destinazioni per linea a schermo piccolo (mobile)
+
+    8) Aggiungi nella sezione "Welcome Summer" un'ombra grande ad ogni card.
+    -->
+
+    <section id="welcomeSummer" class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <h2 class="mt-5">Welcome Summer</h2>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2" style="min-height: 18rem;">
+                        <div class="card border border-0 shadow-lg p-3 mb-5 bg-body rounded">
+                            <img src="assets/img/destinazioni/01_costa_azzurra_nizza.webp" class="card-img-top"
+                                alt="Costa Azzurra - Nizza">
+                            <div class="card-body">
+                                <h5 class="card-title">Nizza</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2" style="min-height: 18rem;">
+                        <div class="card border border-0 shadow-lg p-3 mb-5 bg-body rounded">
+                            <img src="assets/img/destinazioni/02_malta_mellieha.webp" class="card-img-top"
+                                alt="Malta - Mellieha">
+                            <div class="card-body">
+                                <h5 class="card-title">Mellieha</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2" style="min-height: 18rem;">
+                        <div class="card border border-0 shadow-lg p-3 mb-5 bg-body rounded">
+                            <img src="assets/img/destinazioni/03_spagna_madrid.webp" class="card-img-top"
+                                alt="Spagna - Madrid">
+                            <div class="card-body">
+                                <h5 class="card-title">Madrid</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2" style="min-height: 18rem;">
+                        <div class="card border border-0 shadow-lg p-3 mb-5 bg-body rounded">
+                            <img src="assets/img/destinazioni/04_messico_puerto_morelos.webp" class="card-img-top"
+                                alt="Messico - Puerto Morelos">
+                            <div class="card-body">
+                                <h5 class="card-title">Puerto Morelos</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2" style="min-height: 18rem;">
+                        <div class="card border border-0 shadow-lg p-3 mb-5 bg-body rounded">
+                            <img src="assets/img/destinazioni/05_francia_parigi.webp" class="card-img-top"
+                                alt="Francia - Parigi">
+                            <div class="card-body">
+                                <h5 class="card-title">Parigi</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2" style="min-height: 18rem;">
+                        <div class="card border border-0 shadow-lg p-3 mb-5 bg-body rounded">
+                            <img src="assets/img/destinazioni/06_austria_vienna.webp" class="card-img-top"
+                                alt="Austria - Vienna">
+                            <div class="card-body">
+                                <h5 class="card-title">Vienna</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the
+                                    card's content.</p>
+                                <a href="#" class="btn btn-info">Prenota</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    6) Implementa la sezione "Offerta del giorno". Qui avrai:
+
+    66% dello spazio dedicato all'immagine del luogo di destinazione
+    33% dedicato al nome, date, prezzo e un badge con "best offer" come testo
+
+    l'immagine avrà i bordi arrotondati e un'ombra leggera
+    per il contenuto: il nome dovrà essere più grande del resto,
+    le date dovranno essere formattate con font "monospace",
+    il prezzo dovrà essere definito come "lead"
+    e il badge sarà scuro.
+
+    7) Rendi invisibile la sezione "Offerta del giorno" su schermi piccoli. 
+    -->
+
+    <section id="offertaDelGiorno" class="container">
+        <h2 class="mt-5">Offerta del giorno</h2>
+        <div class="card shadow-sm bg-body rounded">
+            <div class="row g-0">
+                <div class="col-md-8 ">
+                    <img src="assets/img/destinazioni/05_francia_parigi.webp" class="img-fluid rounded-start"
+                        alt="Francia - Parigi">
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body ">
+                        <h5 class="card-title">Francia - Parigi</h5>
+                        <p>15.12.2022 - 31.12.2022</p>
+                        <p class="card-text">Ville a partire da 500€, non fartele sfuggire!</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    9) Crea una sezione "Last Minute", in cui mostrerai 6 immagini delle destinazioni last minute come rettangoli ombreggiati dai bordi arrotondati, senza testo. 
+    Rendile responsive come preferisci! 
+    -->
+
+    <section id="lastMinute" class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <h2 class="mt-5">Last Minute</h2>
+                    <article class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                        <div class="card">
+                            <img src="assets/img/destinazioni/01_costa_azzurra_nizza.webp" class="card-img-top"
+                                alt="Costa Azzurra - Nizza">
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                        <div class="card">
+                            <img src="assets/img/destinazioni/02_malta_mellieha.webp" class="card-img-top"
+                                alt="Malta - Mellieha">
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                        <div class="card">
+                            <img src="assets/img/destinazioni/03_spagna_madrid.webp" class="card-img-top"
+                                alt="Spagna - Madrid">
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                        <div class="card">
+                            <img src="assets/img/destinazioni/04_messico_puerto_morelos.webp" class="card-img-top"
+                                alt="Messico - Puerto Morelos">
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                        <div class="card">
+                            <img src="assets/img/destinazioni/05_francia_parigi.webp" class="card-img-top"
+                                alt="Francia - Parigi">
+                        </div>
+                    </article>
+                    <article class="col-6 col-sm-6 col-md-6 mb-3 col-lg-4 col-xl-2">
+                        <div class="card">
+                            <img src="assets/img/destinazioni/06_austria_vienna.webp" class="card-img-top"
+                                alt="Austria - Vienna">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    10) Crea una sezione "Recensioni", dove l'utente potrà trovare alcuni feedback da utenti fittizi. 
+    Piccola immagine tonda a sinistra con bordo 2px azzurro, nome utente e recensione a destra 
+    -->
+
+    <section id="recensioni" class="container">
+        <h2 class="mt-5 text-center">Dicono di noi</h2>
+        <div class="card mb-12">
+            <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="assets/img/profile/01.webp" class="img-fluid profile_foto" alt="Kathrina">
+                </div>
+                <div class="col-md-11">
+                    <div class="card-body">
+                        <h5 class="card-title">Kathrina</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus
+                            adipisci optio modi similique doloremque soluta numquam fugiat, ipsum beatae! Perspiciatis
+                            voluptatem possimus voluptates officia vel accusantium autem dolorum sint!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="assets/img/profile/02.webp" class="img-fluid profile_foto" alt="Jhon">
+                </div>
+                <div class="col-md-11">
+                    <div class="card-body">
+                        <h5 class="card-title">Jhon</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus
+                            adipisci optio modi similique doloremque soluta numquam fugiat, ipsum beatae! Perspiciatis
+                            voluptatem possimus voluptates officia vel accusantium autem dolorum sint!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-md-1">
+                    <img src="assets/img/profile/03.jpeg" class="img-fluid profile_foto" alt="Paul">
+                </div>
+                <div class="col-md-11">
+                    <div class="card-body">
+                        <h5 class="card-title">Paul</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam natus
+                            adipisci optio modi similique doloremque soluta numquam fugiat, ipsum beatae! Perspiciatis
+                            voluptatem possimus voluptates officia vel accusantium autem dolorum sint!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    11) Crea un footer con le informazioni dell'agenzia e un bottone "Contattaci". 
+    -->
+    <footer>
+
+    </footer>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+</html>
