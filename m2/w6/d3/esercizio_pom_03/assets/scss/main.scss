@@ -4,11 +4,13 @@
 
 body {
     margin: 0;
+    padding:0;
     width: 100%;
     background-color: $sfondoMain;
 }
 
 header {
+    font-family: 'Roboto', sans-serif;
     background-color: $sfondoHeader;
     padding: 10px 60px;
 
@@ -74,12 +76,27 @@ main {
         }
 
         .right {
-            width: 30%;
+            width: 40%;
 
             img {
-                width: 80%;
+                -webkit-filter: invert(100%);
+                width: 90%;
                 float: right;
             }
         }
+    }
+}
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    background-color: $sfondoHeader;
+    position: sticky;
+    bottom: 0px;
+    text-align: end;
+
+    div{
+        margin:0;
+        height: 105px;
+        color:$coloreTesti;
     }
 }
