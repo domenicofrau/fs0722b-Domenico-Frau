@@ -1,0 +1,85 @@
+@import "variabili";
+@import "bottone";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Spectral&display=swap');
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: $sfondoMain;
+}
+
+header {
+    background-color: $sfondoHeader;
+    padding: 10px 60px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        padding: 0 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $coloreTesti;
+    }
+
+}
+
+main {
+    background-color: $sfondoMain;
+
+    section {
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            width: 70%;
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 500%;
+                text-transform: uppercase;
+                text-align: start;
+                color: $coloreTesti;
+                text-shadow: 1px 1px 1px $ombra;
+            }
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 150%;
+                color: $coloreTesti;
+                margin-bottom: 60px;
+            }
+
+            .btn{
+                margin: 20px;
+            }
+
+        }
+
+        .right {
+            width: 30%;
+
+            img {
+                width: 80%;
+                float: right;
+            }
+        }
+    }
+}
