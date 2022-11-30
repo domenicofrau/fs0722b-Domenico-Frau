@@ -1,5 +1,7 @@
 @import "variabili";
 @import "bottone";
+@import "link";
+@import "animazione";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Spectral&display=swap');
 
 body {
@@ -30,13 +32,6 @@ header {
 
     li {
         list-style: none;
-    }
-
-    a {
-        padding: 0 50px;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $coloreTesti;
     }
 
 }
@@ -77,12 +72,12 @@ main {
 
         .right {
             width: 40%;
+        }
 
-            img {
-                -webkit-filter: invert(100%);
-                width: 90%;
-                float: right;
-            }
+        img {
+            -webkit-filter: invert(100%);
+            width: 90%;
+            float: right;
         }
     }
 }

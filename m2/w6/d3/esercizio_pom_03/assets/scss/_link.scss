@@ -1,0 +1,11 @@
+a {
+    padding: 0 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $coloreTesti;
+}
+
+a:hover {
+    color: #f45aa7;
+    text-shadow: 0px 1px 20px white;
+}

@@ -15,6 +15,7 @@
 
 .btn:hover {
   background-color: #3a0a22;
+  border: 1px solid #f45aa7;
 }
 
 .btn:active {
@@ -30,6 +31,56 @@
   background-color: #c32171;
 }
 
+a {
+  padding: 0 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #f45aa7;
+  text-shadow: 0px 1px 20px white;
+}
+
+img.head:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+
+img.head {
+  -webkit-animation-name: animazione_01;
+          animation-name: animazione_01;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes animazione_01 {
+  0% {
+    opacity: 0;
+    transform: opacity(10);
+  }
+  100% {
+    opacity: 1;
+    transform: opacity(0);
+  }
+}
+
+@keyframes animazione_01 {
+  0% {
+    opacity: 0;
+    transform: opacity(10);
+  }
+  100% {
+    opacity: 1;
+    transform: opacity(0);
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -55,12 +106,6 @@ header ul {
 }
 header li {
   list-style: none;
-}
-header a {
-  padding: 0 50px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 main {
@@ -95,7 +140,7 @@ main section .left .btn {
 main section .right {
   width: 40%;
 }
-main section .right img {
+main section img {
   -webkit-filter: invert(100%);
   width: 90%;
   float: right;
