@@ -1,0 +1,50 @@
+$sfondoHeader: #000000;
+$sfondoMain: #262628;
+
+$coloreTesti: #ffffff;
+$ombra: rgb(17, 17, 17);
+
+.btn{
+    border-radius: 28px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #0000 ;
+}
+
+.btn:hover {
+    background-color: #3a0a22;
+    border: 1px solid #f45aa7;
+}
+
+.btn:active {
+    position: relative;
+    top: 3px;
+}
+
+.btn01 {
+    background-color: #c32171;
+}
+
+.btn02 {
+    background-color: #c32171;
+
+}
+
+a {
+    padding: 0 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $coloreTesti;
+}
+
+a:hover {
+    color: #f45aa7;
+    text-shadow: 0px 1px 20px white;
+}

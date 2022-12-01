@@ -1,3 +1,82 @@
 @import "variabili";
 @import "funzioni";
 @import "testi";
+
+
+body {
+    margin: 0;
+    padding:0;
+    width: 100%;
+    background-color: $sfondoMain;
+}
+
+header {
+    font-family: 'Roboto', sans-serif;
+    background-color: $sfondoHeader;
+    padding: 10px 60px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+    }
+
+}
+
+main {
+    background-color: $sfondoMain;
+
+    section {
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            width: 70%;
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 500%;
+                text-transform: uppercase;
+                text-align: start;
+                color: $coloreTesti;
+                text-shadow: 1px 1px 1px $ombra;
+            }
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 150%;
+                color: $coloreTesti;
+                margin-bottom: 60px;
+            }
+
+            .btn{
+                margin: 20px;
+            }
+
+        }
+
+        .right {
+            width: 40%;
+        }
+
+        img {
+            -webkit-filter: invert(100%);
+            width: 90%;
+            float: right;
+        }
+    }
+}
