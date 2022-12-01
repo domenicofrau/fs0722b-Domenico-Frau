@@ -4,6 +4,7 @@
 @import "testi";
 @import "colori";
 @import "button&link";
+@import "animazione";
 
 
 body {
@@ -66,12 +67,19 @@ main {
         }
 
         .right {
+            margin-right: 10%;
+            color: $coloreTesti;
+            text-transform: uppercase;
             width: 40%;
         }
 
-        img {
+        .head {
             -webkit-filter: invert(100%);
             width: 90%;
+            float: right;
+        }
+        .app {
+            width: 95%;
             float: right;
         }
     }

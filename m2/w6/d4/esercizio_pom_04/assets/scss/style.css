@@ -46,6 +46,43 @@ a:hover {
   text-shadow: 0px 1px 20px white;
 }
 
+img.head {
+  -webkit-animation-name: animazione_01;
+          animation-name: animazione_01;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+img.head:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+
+@-webkit-keyframes animazione_01 {
+  0% {
+    opacity: 0;
+    transform: opacity(10);
+  }
+  100% {
+    opacity: 1;
+    transform: opacity(0);
+  }
+}
+
+@keyframes animazione_01 {
+  0% {
+    opacity: 0;
+    transform: opacity(10);
+  }
+  100% {
+    opacity: 1;
+    transform: opacity(0);
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -98,10 +135,17 @@ main section .left h2 {
   margin-bottom: 60px;
 }
 main section .right {
+  margin-right: 10%;
+  color: #ffffff;
+  text-transform: uppercase;
   width: 40%;
 }
-main section img {
+main section .head {
   -webkit-filter: invert(100%);
   width: 90%;
+  float: right;
+}
+main section .app {
+  width: 95%;
   float: right;
 }/*# sourceMappingURL=style.css.map */

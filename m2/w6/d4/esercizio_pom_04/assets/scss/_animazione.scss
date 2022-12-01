@@ -1,0 +1,15 @@
+img.head{
+animation-name: animazione_01;
+animation-duration: 5s;
+animation-delay: 0.0s;
+animation-iteration-count: 1;
+animation-timing-function: linear;
+&:hover{
+    transform: scale(1.1) rotate(0deg);
+}
+}
+
+@keyframes animazione_01{
+    0%{opacity:0; transform: opacity(10);}
+    100% {opacity:1;transform: opacity(0);}
+}
