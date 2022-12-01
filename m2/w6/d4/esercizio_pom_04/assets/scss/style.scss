@@ -1,17 +1,20 @@
-@import "variabili";
+/* ------------------ importazione dei PARTIALS ------------------*/
+
 @import "funzioni";
 @import "testi";
+@import "colori";
+@import "button&link";
 
 
 body {
     margin: 0;
-    padding:0;
+    padding: 0;
     width: 100%;
     background-color: $sfondoMain;
 }
 
+/* -------------- esempio di SELETTORI NIDIFICATI ----------------*/
 header {
-    font-family: 'Roboto', sans-serif;
     background-color: $sfondoHeader;
     padding: 10px 60px;
 
@@ -32,9 +35,9 @@ header {
     li {
         list-style: none;
     }
-
 }
 
+/* -------------- esempio di NESTING e EXTEND ----------------*/
 main {
     background-color: $sfondoMain;
 
@@ -48,7 +51,6 @@ main {
             width: 70%;
 
             h1 {
-                font-family: 'Roboto', sans-serif;
                 font-size: 500%;
                 text-transform: uppercase;
                 text-align: start;
@@ -57,16 +59,10 @@ main {
             }
 
             h2 {
-                font-family: 'Roboto', sans-serif;
+                @extend h1;
                 font-size: 150%;
-                color: $coloreTesti;
                 margin-bottom: 60px;
             }
-
-            .btn{
-                margin: 20px;
-            }
-
         }
 
         .right {
@@ -80,3 +76,5 @@ main {
         }
     }
 }
+
+
