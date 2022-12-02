@@ -1,0 +1,36 @@
+//importazione del partial "_colori.scss"
+//------------------------------------------------------------------------------
+@import "colori";
+
+
+
+
+
+//settings del button nella section#01
+//------------------------------------------------------------------------------
+.btn-hero {
+    margin-top: 20px;
+    border: none;
+    background-color: $colore-gradiente-scuro;
+    border-radius: 5px;
+    cursor: pointer;
+    color: $colore-bianco;
+    font-size: 18px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: $ombra;
+
+    &:hover {
+        background-color: $colore-gradiente-chiaro;
+    }
+
+    &:active {
+        position: relative;
+        top: 3px;
+    }
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    color: $colore-hover !important;
+}

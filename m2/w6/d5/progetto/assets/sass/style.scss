@@ -1,0 +1,122 @@
+//importazione dei partial
+//------------------------------------------------------------------------------
+@import "testi";
+@import "colori";
+@import "button&link";
+
+
+
+
+
+//settings generali
+//------------------------------------------------------------------------------
+section {
+    height: 40vh;
+}
+
+.icona {
+    font-size: 300%;
+}
+
+
+
+
+
+//header
+//------------------------------------------------------------------------------
+header {
+    position: sticky;
+    top: 0px;
+}
+
+
+
+
+
+//section #01
+//------------------------------------------------------------------------------
+#section-hero {
+    background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-position: center;
+}
+
+
+//contenuto della section #01
+//------------------------------------------------------------------------------
+.content-hero {
+    padding: 5% 10%;
+}
+
+
+
+
+
+//contenuto della section #02
+//------------------------------------------------------------------------------
+.content-grid {
+    padding-top: 1%;
+    background-color: $colore-svg;
+    height: 250px;
+}
+
+
+
+
+
+//section #03
+//------------------------------------------------------------------------------
+#section-partner {
+    margin-top: 10%;
+    margin-bottom: -5%;
+}
+
+
+//contenuto della section #03
+//------------------------------------------------------------------------------
+.content-partner {
+    margin-top: 2%;
+}
+
+
+
+
+
+//section #04
+//------------------------------------------------------------------------------
+#section-opinioni {
+    margin-bottom: 5%;
+}
+
+
+//contenuto della section #04
+//------------------------------------------------------------------------------
+.content-opinioni {
+    margin-top: 5%;
+}
+
+.recensore {
+    border-radius: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.recensore-nome {
+    font-size: 200%;
+    margin-bottom: 5%;
+}
+
+
+
+
+//contenuto del footer
+//------------------------------------------------------------------------------
+.content-footer {
+    padding: 15px;
+}
+
+.logo-footer {
+    font-size: 200%;
+}
