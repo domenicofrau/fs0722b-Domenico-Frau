@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -39,11 +38,9 @@ h3 {
   text-decoration: none;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0);
 }
-
 .btn-hero:hover {
   background-color: #8137fa;
 }
-
 .btn-hero:active {
   position: relative;
   top: 3px;
@@ -120,6 +117,4 @@ header {
 
 .logo-footer {
   font-size: 200%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
