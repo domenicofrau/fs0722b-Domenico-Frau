@@ -3,7 +3,7 @@ alert("ho modificato il valore di profileURL nel JSON per mantenere la mia organ
 let cardUtente = document.getElementById("card-user");              // definisco la variabile cardUtente per agganciarmi all'html e per poter inniettare contenuto.
 
 // PRIMO METODO
-////--------------------------------------------------------------  // TRASFERIENTO DEI DATI JASON ALL'INTERNO DELL'HTML TRAMITE XMLHTTPREQUEST
+////--------------------------------------------------------------  // TRASFERIENTO DEI DATI JSON ALL'INTERNO DELL'HTML TRAMITE XMLHTTPREQUEST
 //let requestURL = './assets/json/users.json';                      // definisco il percorso del file;
 //let request = new XMLHttpRequest();                               // definisco la richiesta;
 //request.open('GET', requestURL);                                  // apro la richiesta utilizzando il metodo GET;
@@ -15,7 +15,7 @@ let cardUtente = document.getElementById("card-user");              // definisco
 //}
 
 // SECONDO METODO
-//--------------------------------------------------------------    // TRASFERIENTO DEI DATI JASON ALL'INTERNO DELL'HTML TRAMITE FETCH
+//--------------------------------------------------------------    // TRASFERIENTO DEI DATI JSON ALL'INTERNO DELL'HTML TRAMITE FETCH
 (async () => {                                                      // definisco e invoco una funzione asincrona anonima utilizzando la sintassi della funzione freccia (arrow function);
     const response = await fetch("assets/json/users.json");         // richiedo la risorsa (in questo caso in locale) con fetch. Utilizzo la keyword "await" per aspettare che la promise sia risolta. Facendo così ottengo un oggetto di tipo response;
     console.log(response);                                          // la richiesta è andata a buon fine, sotto forma di readableStream (flusso di byte);
