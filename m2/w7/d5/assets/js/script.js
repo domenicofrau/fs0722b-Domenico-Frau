@@ -22,18 +22,18 @@ let cardUtente = document.getElementById("card-user");              // definisco
     const datiJson = await response.json();                         // trasformo il flusso di byte in oggetto JS utilizzando il metodo json sull'oggetto response;
     console.log(datiJson);                                          // i dati sono stati importati correttamente;
 
-//--------------------------------------------------------------    // COSTRUZIONE DELL'HTML
+    //----------------------------------------------------------    // COSTRUZIONE DELL'HTML
     let utenti = datiJson;                                          // definisco la variabile utenti utilizzando i dati provenienti dal file json (array);
     for (let i = 0; i < utenti.length; i++) {                       // avvio un ciclo tramite il quale costruisco una card (.innerHTML) per ogni utente presente all'interno dell'array;
         cardUtente.innerHTML += `                                   
             <div class="col-3 p-3">
-            <div class="card border-secondary shadow-sm text-center">
-            <img src="${utenti[i].profileURL}" class="card-img-top w-25 bg-light rounded-circle mx-auto mt-3" alt="immagine profilo">
-            <div class="card-body">
-            <h3 class="card-title">${utenti[i].firstName} ${utenti[i].lastName}</h3>
-            <h5><a href="mailto:${utenti[i].email}" class="card-link text-warning text-decoration-none">${utenti[i].email}</a><h5>
-            </div>
-            </div>
+                <div class="card border-secondary shadow-sm text-center">
+                    <img src="${utenti[i].profileURL}" class="card-img-top w-25 bg-light rounded-circle mx-auto mt-3" alt="immagine profilo">
+                    <div class="card-body">
+                        <h3 class="card-title">${utenti[i].firstName} ${utenti[i].lastName}</h3>
+                        <h5><a href="mailto:${utenti[i].email}" class="card-link text-warning text-decoration-none">${utenti[i].email}</a><h5>
+                    </div>
+                </div>
             </div>`
     }
 })();                                                               // invoco la funzione.
