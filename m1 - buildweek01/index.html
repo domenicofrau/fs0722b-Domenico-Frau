@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="shortcut icon" href="src/img/favicon.ico" />
+  <title>Welcome - Epicode</title>
+</head>
+
+<body id="indexBody">
+  <header>
+    <div>
+      <a href="../../index.html"><img src="src/img/epicode_logo.png" /></a>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <h1>Welcome to <b>your exam</b></h1>
+    </div>
+
+    <div>
+      <h3>Instructions</h3>
+      <p class="primo">
+        We dont't expect most engineers to know the answer to all of these
+        question, so don't worry if you'r unsure of a few of them.
+      </p>
+    </div>
+
+    <div>
+      <ul>
+        <li>Each question is<b> timed </b>and can only be<b> answered once. </b></li>
+        <li> Changing broswer tab or opening other windows will<b> invalidate the question </b>.</li>
+        <li>This exam will take approx.<b> 0-5 minutes </b>.</li>
+      </ul>
+    </div>
+
+    <div id="container_pulsanti">
+      <input type="button" id="livello_1" value="Facile" onclick='change("easy");' />
+      <input type="button" id="livello_2" value="Medio" onclick='change("medium");' />
+      <input type="button" id="livello_3" value="Difficile" onclick='change("hard");' />
+    </div>
+
+    <div id="form">
+      <form action="src/components/benchmark.html">
+        <input type="checkbox" required />
+        <label>I promise to answer myself without help from anyone</label>
+        <input type="submit" value="proceed" />
+      </form>
+    </div>
+  </main>
+  <script>
+    let pulsante_1 = document.getElementById("livello_1")
+    let pulsante_2 = document.getElementById("livello_2")
+    let pulsante_3 = document.getElementById("livello_3")
+    let classe = "livello_selezionato"
+
+    window.onload = function () {
+      localStorage.setItem("livello", "easy");
+      pulsante_1.classList.add(classe)
+    };
+
+    function change(livello) {
+      localStorage.setItem("livello", livello);
+      switch (livello) {
+        case "easy":
+          pulsante_1.classList.add(classe)
+          pulsante_2.classList.remove(classe)
+          pulsante_3.classList.remove(classe)
+          break;
+        case "medium":
+          pulsante_1.classList.remove(classe)
+          pulsante_2.classList.add(classe)
+          pulsante_3.classList.remove(classe)
+          break;
+        case "hard":
+          pulsante_1.classList.remove(classe)
+          pulsante_2.classList.remove(classe)
+          pulsante_3.classList.add(classe)
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>

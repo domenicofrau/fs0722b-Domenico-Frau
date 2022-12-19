@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;800&family=Outfit:wght@200;300;400;500;600;800&display=swap");
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  padding: 0;
+}
+
+header {
+  padding: 40px 0;
+}
+
+header img {
+  width: 200px;
+}
+
+b {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 60px;
+  color: white;
+  max-width: 350px;
+  margin: 30px 0;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 45px;
+  color: #d20094;
+  font-family: "Inter", sans-serif;
+  margin: 35px 0px 10px 0px;
+}
+
+h3 {
+  font-size: 32px;
+  color: #d20094;
+  font-family: "Inter", sans-serif;
+  margin: 35px 0px 10px 0px;
+}
+
+ul {
+  color: white;
+  margin-top: 40px;
+}
+
+li {
+  margin: 10px;
+  margin-left: 25px;
+  list-style: disc;
+  color: white;
+  text-align: start;
+}
+
+input[value] {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+} */
+
+/*
+__        __  _____   _        ____    ___    __  __   _____
+\ \      / / | ____| | |      / ___|  / _ \  |  \/  | | ____|
+\ \ /\ / /  |  _|   | |     | |     | | | | | |\/| | |  _|
+\ V  V /   | |___  | |___  | |___  | |_| | | |  | | | |___
+\_/\_/    |_____| |_____|  \____|  \___/  |_|  |_| |_____|
+
+*/
+#indexBody {
+  padding: 0 100px;
+}
+
+#form input[type="checkbox"] {
+  border: 2px solid white;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+#form input[type="checkbox"]:checked {
+  background-color: white;
+  /* border: 2px solid #00fff0; */
+  box-shadow: 0px 0px 20px #00fff0;
+}
+
+#form label {
+  display: inline;
+  color: white;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+#form {
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+
+#form form input[type="submit"] {
+  float: right;
+  margin-top: -15px;
+}
+
+#container_pulsanti input[type="button"],
+#form input[type="submit"],
+#form input[type="button"] {
+  border: 0;
+  padding: 20px 60px;
+  width: 300px;
+  background-color: #00fff0;
+  vertical-align: middle;
+}
+
+#container_pulsanti input[type="button"]:hover,
+#form input[type="submit"]:hover,
+#form input[type="button"]:hover {
+  box-shadow: 0px 0px 20px #00fff0;
+}
+
+#container_pulsanti {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#container_pulsanti input[type="button"] {
+  margin: 0 25px;
+}
+
+/*
+  ____    _____   _   _    ____   _   _   __  __      _      ____    _  __
+ | __ )  | ____| | \ | |  / ___| | | | | |  \/  |    / \    |  _ \  | |/ /
+ |  _ \  |  _|   |  \| | | |     | |_| | | |\/| |   / _ \   | |_) | | ' /
+ | |_) | | |___  | |\  | | |___  |  _  | | |  | |  / ___ \  |  _ <  | . \
+ |____/  |_____| |_| \_|  \____| |_| |_| |_|  |_| /_/   \_\ |_| \_\ |_|\_\
+
+*/
+#benchmark {
+  padding: 0 100px;
+}
+
+#titolo_domanda {
+  display: block;
+  text-align: center;
+  margin: 100px auto;
+  max-width: 1200px;
+  width: auto;
+}
+
+#pulsanti {
+  height: 250px;
+}
+
+#pulsanti button {
+  border-top: 2px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin: 25px 50px;
+  width: 400px;
+  max-width: 450px;
+  max-height: 300px;
+  background: #a7a7a720;
+  border-radius: 40px;
+  padding: 25px 80px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#pulsanti button:hover {
+  background: linear-gradient(#d20094, #d200939b, #d2009350);
+}
+
+#question_counter {
+  margin-top: 100px;
+}
+
+#question {
+  text-transform: uppercase;
+  color: white;
+  font-size: 22px;
+}
+
+#timercontainer {
+  display: block;
+  margin-top: -120px;
+  text-transform: uppercase;
+  float: right;
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  width: 80px;
+}
+
+#timercontainer #timer {
+  text-align: center;
+  font-size: 45px;
+}
+
+/*
+  ____    _____   ____    _   _   _       _____   ____
+ |  _ \  | ____| / ___|  | | | | | |     |_   _| / ___|
+ | |_) | |  _|   \___ \  | | | | | |       | |   \___ \
+ |  _ <  | |___   ___) | | |_| | | |___    | |    ___) |
+ |_| \_\ |_____| |____/   \___/  |_____|   |_|   |____/
+
+*/
+#resultheader {
+  padding: 25px 100px;
+}
+
+#results h1 {
+  margin: -25px auto 0px auto;
+  font-weight: 600;
+}
+
+#results p {
+  color: white;
+  font-size: 16px;
+  margin-top: -10px;
+}
+
+#testo_doughnut {
+  color: white;
+  position: relative;
+  top: -325px;
+  left: 85px;
+  text-align: center;
+  max-width: 280px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.sub_text {
+  padding-top: 35px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+#errate {
+  min-width: 250px;
+  text-align: end;
+}
+
+#corrette {
+  min-width: 250px;
+}
+
+#container h2 {
+  color: white;
+  font-size: 64px;
+  font-weight: 400;
+  margin: 0;
+}
+
+#container h3 {
+  color: white;
+  font-size: 58px;
+  font-weight: 800;
+  margin: 0;
+}
+
+#container p {
+  color: white;
+  font-size: 22px;
+  font-weight: 200;
+  margin: 0;
+}
+
+#rate input[type="button"] {
+  margin: 60px 0 100px 0;
+  border: 2px solid white;
+  padding: 15px 50px;
+  background-color: #00000010;
+  color: white;
+  font-weight: 600;
+}
+
+#rate input[type="button"]:hover {
+  box-shadow: 0px 0px 20px #00fff0;
+
+  background-color: #00000010;
+}
+
+/*
+  _____   _____   _____   ____    ____       _       ____   _  __
+ |  ___| | ____| | ____| |  _ \  | __ )     / \     / ___| | |/ /
+ | |_    |  _|   |  _|   | | | | |  _ \    / _ \   | |     | ' /
+ |  _|   | |___  | |___  | |_| | | |_) |  / ___ \  | |___  | . \
+ |_|     |_____| |_____| |____/  |____/  /_/   \_\  \____| |_|\_\
+
+*/
+#feedback {
+  padding: 0 100px;
+}
+
+#feedback h1 {
+  margin: 100px auto 0px auto;
+  font-weight: 600;
+  max-width: 800px;
+}
+
+#feedback p {
+  color: white;
+  font-size: 16px;
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+#feedback #form {
+  margin-top: 20px;
+}
+
+#feedback #form input[type="button"] {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  padding: 15px 40px;
+}
+
+#feedback #form input[type="text"] {
+  border: 0px;
+  border-bottom: 1px solid #d20094;
+  width: 45%;
+  background-color: transparent;
+  margin: 25px auto;
+  padding: 10px 20px;
+  outline: none;
+}
+
+#feedback #form input[type="text"]:defined {
+  color: white;
+}
+
+/*
+   ____   _          _      ____    ____    ___
+   / ___| | |        / \    / ___|  / ___|  |_ _|
+   | |     | |       / _ \   \___ \  \___ \   | |
+   | |___  | |___   / ___ \   ___) |  ___) |  | |
+   \____| |_____| /_/   \_\ |____/  |____/  |___|
+   
+*/
+
+.livello_selezionato {
+  box-shadow: 0px 0px 20px #00fff0;
+}
+
+.centra {
+  display: block;
+  margin: 30px 0 auto;
+  text-align: center;
+}
+
+.viola {
+  color: #d20094;
+}
+
+.nascondi {
+  display: none;
+}
+
+.doughnut {
+  z-index: 1;
+  width: 450px;
+  position: relative;
+  left: 20px;
+}
+
+.stella {
+  margin: 35px 8px;
+  font-size: 50px;
+  color: white;
+}
+
+.stella.piena {
+  color: #00fff0;
+}
+
+.primo {
+  color: white;
+  max-width: 480px;
+}
+.celeste {
+  color: #00fff0;
+  padding-bottom: 20px;
+}
