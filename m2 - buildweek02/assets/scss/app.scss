@@ -1,0 +1,145 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import "variables";
+@import "navbar";
+@import "aside_left";
+@import "aside_right";
+@import "background";
+
+@import "_player";
+@import "_dome";
+@import "_login";
+
+body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+
+}
+
+.maiuscolo {
+    text-transform: uppercase;
+}
+
+.tessera {
+    padding: 0;
+    width: 22%;
+    margin: 0 5px;
+    background-color: $antracite_alt;
+
+    a,
+    p {
+        color: white;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    &:hover {
+        background-color: $antracite_hover;
+
+        .hide {
+            display: block;
+        }
+    }
+}
+
+.hide {
+    display: none;
+    height: 45px;
+    transform: translate(0, -15px);
+}
+
+.btn-playlist {
+    display: none;
+    height: 45px;
+    width: 45px;
+    transform: translate(0, -30px);
+}
+
+.cover-playlist {
+    width: 100%;
+    height: 100%;
+}
+
+.playlist-card {
+    border: none;
+    background-color: $grigio_playlist_home;
+    color: white;
+
+    .background-card {
+        opacity: 70%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $grigio_playlist_home_hover;
+
+        .btn-playlist {
+            display: block;
+        }
+    }
+}
+
+
+.btn-playlist,
+.cover-playlist {
+    opacity: 100%;
+}
+
+.artista {
+    img {
+        border-radius: 100%;
+    }
+}
+
+#artist_img {
+    border-radius: 100%;
+    height: 25px;
+    float: left;
+    margin-right: 5px;
+}
+
+#album_img {
+    padding-left: 2%;
+    max-width: 250px;
+}
+
+#album_type {
+    text-transform: uppercase;
+}
+
+
+#sticky {
+    position: sticky;
+    top: 30px;
+}
+
+#annunci .card {
+    background: linear-gradient(225deg, rgba(75, 75, 75, 1) 0%, rgba(22, 21, 20, 1) 100%);
+    border: none;
+    border-radius: 0;
+    color: white;
+}
+
+#banner-img {
+    object-fit: cover;
+    object-position: 0 -100px;
+    filter: blur(2px);
+}
+
+#artist_control {
+    position: relative;
+    z-index: 10;
+}
+
+.img_container {
+    background-color: rgba(0, 0, 0, 0.8);
+}
