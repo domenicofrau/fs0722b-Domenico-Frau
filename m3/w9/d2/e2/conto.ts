@@ -52,6 +52,35 @@ contoDue.addInterest();
 console.log('Il tuo saldo corrente con interesse è di:', contoDue.saldo);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let btn_figlio = document.getElementById("btn_figlio")
 
 btn_figlio.addEventListener("click", compila_figlio);

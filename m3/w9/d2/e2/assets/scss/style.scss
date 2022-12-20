@@ -1,3 +1,14 @@
-#contenuto_home{
-    width:50%
+#interfaccia {
+    position: fixed;
+    align-content: center;
+}
+
+#contenuto_home {
+    padding-top: 400px;
+    width: 50%;
+    border: none;
+}
+
+.card-body{
+    padding: 40px;
 }
