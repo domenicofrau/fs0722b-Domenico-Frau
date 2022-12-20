@@ -1,13 +1,3 @@
-/*
-
-Metodi:
-oneDeposit:number // versamento
-oneWithDraw // prelievo
-twoDeposit:number // versamento
-twoWithDraw // prelievo
-addInterest// interesse MotherAccount 10%
-
-*/
 class SonAccount {                                                              //definizione della prima classe "SonAccount"
     saldo: number = 0;
     versamento: number = 0;
@@ -60,6 +50,31 @@ console.log('Hai prelevato:', contoDue.prelievo);
 console.log('Il saldo attuale è di:', contoDue.saldo);
 contoDue.addInterest();
 console.log('Il tuo saldo corrente con interesse è di:', contoDue.saldo);
+
+
+let btn_figlio = document.getElementById("btn_figlio")
+
+btn_figlio.addEventListener("click", compila_figlio);
+
+function compila_figlio() {
+    document.getElementById("page_madre").innerHTML = ``
+    document.getElementById("page_figlio").innerHTML = `  <h5>ACCOUNT FIGLIO</h5>
+                                                        <br>
+                                                        <p>Il saldo attuale del suo conto è di: <b>${contoUno.saldo}.00 €</b></p>
+                                                        `;
+}
+
+let btn_madre = document.getElementById("btn_madre")
+
+btn_madre.addEventListener("click", compila_madre);
+
+function compila_madre() {
+    document.getElementById("page_figlio").innerHTML = ``
+    document.getElementById("page_madre").innerHTML = `  <h5>ACCOUNT MADRE</h5>
+                                                        <br>
+                                                        <p>Il saldo attuale del suo conto è di: <b>${contoDue.saldo}.00 €</b></p>
+                                                        `;
+}
 
 
 
