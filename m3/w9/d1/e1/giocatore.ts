@@ -12,6 +12,7 @@ console.log('Nuomero giocatore 2 :', giocatore2);
 console.log('----------------------------------')
 
 
+
 function confronto() {
     if (giocatore1 == risultato) {
         console.log('Il giocatore 1 ha vinto');
