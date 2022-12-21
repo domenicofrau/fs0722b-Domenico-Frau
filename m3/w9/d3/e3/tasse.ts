@@ -79,4 +79,5 @@ console.log('Tasse Inps:', newCommerciante.getTasseInps(), '€');
 console.log('Tasse Irpef:', newCommerciante.getTasseIrpef(), '€');
 console.log('Reddito annuo netto del commerciante:', newCommerciante.getRedditoAnnuoNetto(), '€');
 
+
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------
