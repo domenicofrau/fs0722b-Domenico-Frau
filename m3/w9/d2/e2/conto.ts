@@ -16,6 +16,7 @@ let contoUno = new SonAccount;
 contoUno.versamento = 100
 contoUno.prelievo = 20
 
+
 console.log('-------------------------------')
 console.log('----------CONTO SON------------')
 console.log('-------------------------------')
