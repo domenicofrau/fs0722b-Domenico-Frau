@@ -58,25 +58,25 @@ function getData(): void {
     }).then((data) => {
         products = data;
 
-        products.map(function (e) {
-            let capo = new Articoli(
-                e.id,
-                e.codprod,
-                e.collezione,
-                e.capo,
-                e.modello,
-                e.quantita,
-                e.colore,
-                e.prezzoivaesclusa,
-                e.prezzoivainclusa,
-                e.disponibile,
-                e.saldo);
+        products.map(function (e) {                                 // richiamo la funzione per ogni elemento dell'array definito con l'ausilio del metodo .map.
+            let capo = new Articoli(                                // attribuisco alla variabile un nuovo oggetto;
+                e.id,                                               // assegno la proprietà;
+                e.codprod,                                          // assegno la proprietà;
+                e.collezione,                                       // assegno la proprietà;
+                e.capo,                                             // assegno la proprietà;
+                e.modello,                                          // assegno la proprietà;
+                e.quantita,                                         // assegno la proprietà;
+                e.colore,                                           // assegno la proprietà;
+                e.prezzoivaesclusa,                                 // assegno la proprietà;
+                e.prezzoivainclusa,                                 // assegno la proprietà;
+                e.disponibile,                                      // assegno la proprietà;
+                e.saldo);                                           // assegno la proprietà;
 
-            console.log(`${capo.capo}`, capo);
-            console.log(`totale capo: € ${capo.getAcquistocapo()}`)
+            console.log(`${capo.capo}`, capo);                      // stampo il nome del capo
+            console.log(`totale capo: € ${capo.getAcquistocapo()}`) // stampo il totale
         });
-        console.log(products);                                  // stampo tutti i prodotti 
+        console.log(products);                                      // stampo tutti i prodotti 
     });
 }
 
-getData();                                                      // avvio la funzione
+getData();                                                          // avvio la funzione
