@@ -1,7 +1,6 @@
 package com.example.GestionePrenotazioni.model;
 
 import java.util.List;
-
 import com.example.GestionePrenotazioni.utils.Tipo;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
