@@ -3,7 +3,6 @@ package com.example.GestionePrenotazioni.runners;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -113,7 +112,7 @@ public class GestionePrenotazioniRun implements ApplicationRunner {
 		book1.setGiorno(LocalDate.of(2023, 10, 11));
 		book1.setUtente(user2);
 		book1.setPostazione(room1db);
-		// srv.PrenotazioneSalva(book1);
+		//srv.PrenotazioneSalva(book1);
 
 		Edificio buildtest = srv.EdificioGetById(1);
 		Utente usertest = srv.UtenteGetById(1);
