@@ -7,28 +7,34 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 
 public class Prenotazione {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPrenotazione;
-	
+
 	@ManyToOne
-	@JoinColumn(name ="idutente")
+	@JoinColumn(name = "idutente")
 	private Utente utente;
-	
+
 	@ManyToOne
-	@JoinColumn(name="idpostazione")
+	@JoinColumn(name = "idpostazione")
 	private Postazione postazione;
-	
+
 	private LocalDate giorno;
-	
-	
+
+	@Override
+	public String toString() {
+		return "Prenotazione [idPrenotazione=" + idPrenotazione + ", utente=" + utente + ", postazione=" + postazione
+				+ ", giorno=" + giorno + "]";
+	}
+
 }

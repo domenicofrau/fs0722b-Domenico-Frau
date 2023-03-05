@@ -1,5 +1,7 @@
 package com.example.GestionePrenotazioni.services;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import com.example.GestionePrenotazioni.repo.EdificioRepository;
 import com.example.GestionePrenotazioni.repo.PostazioneRepository;
 import com.example.GestionePrenotazioni.repo.PrenotazioneRepository;
 import com.example.GestionePrenotazioni.repo.UtenteRepository;
+import com.example.GestionePrenotazioni.utils.Tipo;
 
 @Service
 public class GestionePrenotazioniService {
@@ -81,10 +84,41 @@ public class GestionePrenotazioniService {
 		return (List<Postazione>) postazioneRepository.findAll();
 	}
 
+	public List<Postazione> PostazioneGetByTypeAndCity(Tipo t, String city) {
+		List<Postazione> listaRooms = PostazioneGetAll();
+		List<Postazione> listaRoomsFinded = new ArrayList<Postazione>();
+		for (int i = 0; i < listaRooms.size(); i++) {
+			if (listaRooms.get(i).getTipoSala().compareTo(t) == 0
+					&& listaRooms.get(i).getEdificio().getCitta().equals(city)) {
+				listaRoomsFinded.add(listaRooms.get(i));
+			}
+		}
+		return listaRoomsFinded;
+	}
+
 	// ---------------------------------------------------- PRENOTAZIONE
 	public void PrenotazioneSalva(Prenotazione pre) {
+		List<Prenotazione> listaBooks = PrenotazioneGetAll();
+		boolean check = true;
+		for (int i = 0; i < listaBooks.size(); i++) {
+			if (listaBooks.get(i).getPostazione().getIdPostazione() == pre.getPostazione().getIdPostazione()
+					&& listaBooks.get(i).getGiorno().equals(pre.getGiorno())) {
+				check = false;
+				System.out.println("ERRORE: Non è possibile prenotare! La postazione è già occupata per questa data.");
+				break;
+			}
+			if (listaBooks.get(i).getUtente().getIdUtente() == pre.getUtente().getIdUtente()
+					&& listaBooks.get(i).getGiorno().equals(pre.getGiorno())) {
+				check = false;
+				System.out.println(
+						"ERRORE: Non è possibile prenotare! L'utente ha già una prenotazione per questa data.");
+				break;
+			}
+		}
+		if (check) {
 			prenotazioneRepository.save(pre);
-			System.out.println("-- PRENOTAZIONE SALVATA --");		
+			System.out.println("-- PRENOTAZIONE SALVATA --");
+		}
 	}
 
 	public void PrenotazioneElimina(Prenotazione pre) {

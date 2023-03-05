@@ -12,10 +12,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 
 public class Postazione {
@@ -34,5 +37,13 @@ public class Postazione {
 	
 	@OneToMany(mappedBy = "postazione")
 	private List <Prenotazione> prenotazione;
+
+	@Override
+	public String toString() {
+		return "Postazione [idPostazione=" + idPostazione + ", numeroMaxOccupanti=" + numeroMaxOccupanti
+				+ ", descrizione=" + descrizione + ", tipoSala=" + tipoSala + ", edificio=" + edificio + "]";
+	}
+	
+	
 }
 
