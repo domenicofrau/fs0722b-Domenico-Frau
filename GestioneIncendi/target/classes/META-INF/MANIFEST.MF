@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: Domenico Frau
 Build-Jdk: 17.0.6
 Created-By: Maven Integration for Eclipse
 
+=======
+Manifest-Version: 1.0
+Built-By: Domenico Frau
+Build-Jdk: 17.0.6
+Created-By: Maven Integration for Eclipse
+
+>>>>>>> 68e927cc1620f9f29437abb15c9a41f8a1256775
